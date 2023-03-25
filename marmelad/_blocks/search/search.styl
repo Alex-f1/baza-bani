@@ -1,0 +1,31 @@
+.search
+  &__button-search
+    font-size: 20px
+    color: #F5F5F5
+    font-weight: 450
+    line-height: 1
+    display: flex
+    align-items: center
+    background-color: transparent
+    border: none
+    transition: color 0.3s
+    cursor: pointer
+
+    &:hover
+      color: #3AA531
+
+      &:before
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.8889 19.4174C15.7981 19.4174 19.7778 15.4377 19.7778 10.5285C19.7778 5.61934 15.7981 1.63965 10.8889 1.63965C5.97969 1.63965 2 5.61934 2 10.5285C2 15.4377 5.97969 19.4174 10.8889 19.4174Z' stroke='%233AA531' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M22.0003 21.6395L17.167 16.8062' stroke='%233AA531' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+
+    &:before
+      content: ''
+      flex: 0 0 24px
+      width: 24px
+      max-width: 24px
+      height: 24px
+      margin-right: 20px
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.8889 19.4174C15.7981 19.4174 19.7778 15.4377 19.7778 10.5285C19.7778 5.61934 15.7981 1.63965 10.8889 1.63965C5.97969 1.63965 2 5.61934 2 10.5285C2 15.4377 5.97969 19.4174 10.8889 19.4174Z' stroke='%23F5F5F5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M22.0003 21.6395L17.167 16.8062' stroke='%23F5F5F5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-position: 0 0
+      background-size: contain
+      transition: background 0.3s
