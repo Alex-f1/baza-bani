@@ -6,10 +6,15 @@
     line-height: 1
     display: flex
     align-items: center
+    padding: 0
     background-color: transparent
     border: none
     transition: color 0.3s
     cursor: pointer
+
+    span
+      @media (max-width: 1023px)
+        display: none
 
     &:hover
       color: #3AA531
@@ -29,3 +34,6 @@
       background-position: 0 0
       background-size: contain
       transition: background 0.3s
+
+      @media (max-width: 1023px)
+        margin-right: 0
