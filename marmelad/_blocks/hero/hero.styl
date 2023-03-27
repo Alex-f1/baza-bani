@@ -1,0 +1,250 @@
+.hero
+  color: #F5F5F5
+  height: 775px
+  background-color: #0C0C0C
+  position: relative
+
+  &:hover
+    & ^[0]
+      &__control
+        opacity: 1
+        visibility: visible
+
+  &:before, &:after
+    content: ''
+    position: absolute
+    bottom: 0
+    background-repeat: no-repeat
+    background-position: 0 0
+    background-size: contain
+    z-index: 5
+
+  &:before
+    width: 772px
+    height: 144px
+    left: 0
+    background-image: url('../img/cloud-pic-left.png')
+
+  &:after
+    width: 525px
+    height: 122px
+    right: 0
+    background-image: url('../img/cloud-pic-right.png')
+
+  &__section, &__inner, &__container, &__items, &__item
+    height: 100%
+
+  &__section
+    max-width: 1920px
+    width: 100%
+    margin-right: auto
+    margin-left: auto
+
+  &__container
+    .swiper-pagination
+      bottom: 36px
+
+      .swiper-pagination-bullet
+        width: 13px
+        height: 13px
+        background-color: #BDBDBD
+        opacity: 1
+        margin-left: 7px
+        margin-right: 7px
+        transition: background-color 0.3s
+
+        &:hover
+          background-color: #3AA531
+
+        &.swiper-pagination-bullet-active
+          background-color: #4B4A4A
+
+  &__control
+    position: absolute
+    top: 50%
+    left: 0
+    width: 100%
+    opacity: 0
+    visibility: hidden
+    transition: opacity 0.5s, ease 0.5s
+    z-index: 5
+    pointer-events: none
+
+  &__control-inner
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    .swiper-button-disabled
+      pointer-events: none !important
+
+    .swiper-button-prev, .swiper-button-next
+      position: relative
+      top: auto
+      left: auto
+      right: auto
+      margin-top: 0
+      width: 57px
+      height: 57px
+      border-radius: 50%
+      background-color: #4B4A4A
+      transition: background-color 0.3s
+      pointer-events: all
+
+      &:hover
+        background-color: #3AA531
+
+      &:after
+        content: ''
+        width: 25px
+        height: 25px
+        background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.82422 21.8516L17.1758 12.5L7.82422 3.14844' stroke='white' stroke-width='1.78125' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+        background-repeat: no-repeat
+        background-position: 0 0
+        background-size: contain
+
+    .swiper-button-prev
+      transform: translateX(-100px)
+
+      &:after
+        transform: rotate(180deg)
+
+    .swiper-button-next
+      transform: translateX(100px)
+
+  &__item
+    position: relative
+    background-color: #0C0C0C
+
+    &.swiper-slide-active
+      & ^[0]
+        &__button-more
+          pointer-events: all
+
+  &__info
+    position: absolute
+    top: 250px
+    left: 0
+    z-index: 5
+    width: 100%
+    pointer-events: none
+
+  &__content
+    max-width: 624px
+    width: 100%
+
+    h2
+      font-size: 56px
+      color: #F5F5F5
+      font-family: $fonts.headings
+      font-weight: 700
+      line-height: 1.18
+      margin-top: 0
+      margin-bottom: 15px
+
+  &__desc
+    font-size: 22px
+    color: #BDBDBD
+    font-weight: 400
+    line-height: 1.5
+    margin-bottom: 60px
+
+  &__img
+    max-width: 1278px
+    width: 100%
+    height: 100%
+    margin-left: auto
+    position: relative
+
+    img
+      vertical-align: top
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 64%
+      height: 100%
+      background: linear-gradient(91.88deg, #0C0C0C 17.81%, rgba(12, 12, 12, 0) 67.07%)
+      z-index: 2
+
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: linear-gradient(0deg, rgba(40, 40, 40, 0.5), rgba(40, 40, 40, 0.5)), url('image.png')
+      z-index: 1
+
+  &__button-play
+    color: #F5F5F5
+    font-weight: 450
+    font-size: 22px
+    line-height: 1
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    margin-top: 25px
+    background-color: transparent
+    border: none
+    padding: 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    z-index: 3
+    cursor: pointer
+
+    &:before
+      content: ''
+      width: 98px
+      height: 98px
+      border-radius: 50%
+      background-image: url("data:image/svg+xml,%3Csvg width='98' height='98' viewBox='0 0 98 98' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle opacity='0.8' cx='49' cy='49' r='49' fill='%230C0C0C'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M39.847 32.2716C40.2549 32.0442 40.7161 31.9298 41.183 31.9401C41.649 31.9504 42.1037 32.0846 42.5006 32.3288C42.5014 32.3293 42.5023 32.3298 42.5031 32.3303L66.1005 46.7609C66.4863 46.9914 66.8061 47.3176 67.0288 47.708C67.2534 48.1018 67.3715 48.5472 67.3715 49.0005C67.3715 49.4538 67.2534 49.8993 67.0288 50.293C66.8061 50.6834 66.4863 51.0097 66.1005 51.2401L42.5031 65.6707C42.5021 65.6713 42.5012 65.6719 42.5002 65.6725C42.1034 65.9166 41.6488 66.0506 41.183 66.0609C40.7161 66.0712 40.2549 65.9568 39.847 65.7295C39.4391 65.5021 39.0992 65.17 38.8624 64.7674C38.6256 64.3649 38.5005 63.9065 38.5 63.4395V34.5616C38.5005 34.0945 38.6256 33.6361 38.8624 33.2336C39.0992 32.831 39.4391 32.4989 39.847 32.2716ZM65.4227 47.8849L64.7458 48.9916L64.7544 48.9865C64.752 48.988 64.75 48.99 64.7487 48.9924C64.7473 48.9949 64.7465 48.9977 64.7465 49.0005C64.7465 49.0034 64.7473 49.0062 64.7487 49.0086C64.7501 49.0111 64.7521 49.0132 64.7546 49.0146L65.4227 47.8849ZM64.7312 49.0005L41.125 34.5645L41.125 63.4366L41.1293 63.4339L64.7312 49.0005Z' fill='%23F5F5F5'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-position: 0 0
+      background-size: contain
+
+    span
+      margin-top: 15px
+
+  &__button-more
+    // pointer-events: all
+    &:after
+      content: ''
+      flex: 0 0 16px
+      width: 16px
+      max-width: 16px
+      height: 15px
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='15' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.4043 1L14.7499 7.34565L8.4043 13.6913' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.7499 7.3457L1.25 7.3457' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-position: 0 0
+      background-size: contain
+      transition: background 0.3s
+      margin-left: 8px
+
+    &:hover
+      &:after
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='15' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.4043 1L14.7499 7.34565L8.4043 13.6913' stroke='%233AA531' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.7499 7.3457L1.25 7.3457' stroke='%233AA531' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+
+  &__fraction
+    font-size: 60px
+    color: rgba(223, 223, 223, 0.2)
+    font-weight: 500
+    line-height: 1.1
+    position: absolute
+    z-index: 5
+    bottom: 70px
+    left: 0
+    width: 100%
+
+    i
+      font-style: normal
+      margin-right: -15px
+      margin-left: -15px
