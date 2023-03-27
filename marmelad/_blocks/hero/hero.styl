@@ -1,8 +1,12 @@
 .hero
   color: #F5F5F5
-  height: 775px
+  height: 768px
   background-color: #0C0C0C
   position: relative
+  overflow: hidden
+
+  @media (max-width: 1439px)
+    height: 668px
 
   &:hover
     & ^[0]
@@ -18,6 +22,13 @@
     background-position: 0 0
     background-size: contain
     z-index: 5
+    pointer-events: none
+
+    @media (max-width: 1599px)
+      bottom: -50px
+
+    @media (max-width: 767px)
+      bottom: -30px
 
   &:before
     width: 772px
@@ -25,11 +36,17 @@
     left: 0
     background-image: url('../img/cloud-pic-left.png')
 
+    @media (max-width: 479px)
+      display: none
+
   &:after
     width: 525px
     height: 122px
     right: 0
     background-image: url('../img/cloud-pic-right.png')
+
+    @media (max-width: 767px)
+      right: -130px
 
   &__section, &__inner, &__container, &__items, &__item
     height: 100%
@@ -44,6 +61,9 @@
     .swiper-pagination
       bottom: 36px
 
+      @media (max-width: 767px)
+        bottom: 33px
+
       .swiper-pagination-bullet
         width: 13px
         height: 13px
@@ -52,6 +72,10 @@
         margin-left: 7px
         margin-right: 7px
         transition: background-color 0.3s
+
+        @media (max-width: 767px)
+          width: 8px
+          height: 8px
 
         &:hover
           background-color: #3AA531
@@ -91,6 +115,9 @@
       transition: background-color 0.3s
       pointer-events: all
 
+      @media (max-width: 1279px)
+        display: none
+
       &:hover
         background-color: #3AA531
 
@@ -106,15 +133,31 @@
     .swiper-button-prev
       transform: translateX(-100px)
 
+      @media (max-width: 1439px)
+        transform: translateX(-75px)
+
+      @media (max-width: 1320px)
+        transform: translateX(-55px)
+
       &:after
         transform: rotate(180deg)
 
     .swiper-button-next
       transform: translateX(100px)
 
+      @media (max-width: 1439px)
+        transform: translateX(75px)
+
+      @media (max-width: 1320px)
+        transform: translateX(55px)
+
   &__item
     position: relative
     background-color: #0C0C0C
+
+    @media (max-width: 767px)
+      display: flex
+      flex-direction: column
 
     &.swiper-slide-active
       & ^[0]
@@ -123,15 +166,28 @@
 
   &__info
     position: absolute
-    top: 250px
+    bottom: 220px
     left: 0
     z-index: 5
     width: 100%
     pointer-events: none
 
+    @media (max-width: 1439px)
+      bottom: 180px
+
+    @media (max-width: 1023px)
+      top: 170px
+      bottom: auto
+
   &__content
     max-width: 624px
     width: 100%
+
+    @media (max-width: 1279px)
+      max-width: 350px
+
+    @media (max-width: 639px)
+      max-width: 320px
 
     h2
       font-size: 56px
@@ -142,12 +198,26 @@
       margin-top: 0
       margin-bottom: 15px
 
+      @media (max-width: 1279px)
+        font-size: 36px
+
+      @media (max-width: 1023px)
+        margin-bottom: 20px
+
+      @media (max-width: 374px)
+        margin-bottom: 10px
+        font-size: 32px
+
   &__desc
     font-size: 22px
     color: #BDBDBD
     font-weight: 400
     line-height: 1.5
-    margin-bottom: 60px
+    margin-bottom: 35px
+
+    @media (max-width: 1279px)
+      font-size: 18px
+      margin-bottom: 15px
 
   &__img
     max-width: 1278px
@@ -155,6 +225,13 @@
     height: 100%
     margin-left: auto
     position: relative
+
+    @media (max-width: 1023px)
+      max-width: 100%
+
+    @media (max-width: 767px)
+      height: 420px
+      margin-top: auto
 
     img
       vertical-align: top
@@ -172,6 +249,10 @@
       background: linear-gradient(91.88deg, #0C0C0C 17.81%, rgba(12, 12, 12, 0) 67.07%)
       z-index: 2
 
+      @media (max-width: 1023px)
+        background: linear-gradient(180deg, #0c0c0c 18.81%, rgba(12, 12, 12, 0) 95.07%)
+        width: 100%
+
     &:after
       content: ''
       position: absolute
@@ -179,7 +260,7 @@
       left: 0
       width: 100%
       height: 100%
-      background: linear-gradient(0deg, rgba(40, 40, 40, 0.5), rgba(40, 40, 40, 0.5)), url('image.png')
+      background: linear-gradient(0deg, rgba(40, 40, 40, 0.5), rgba(40, 40, 40, 0.5))
       z-index: 1
 
   &__button-play
@@ -201,6 +282,15 @@
     z-index: 3
     cursor: pointer
 
+    @media (max-width: 1023px)
+      font-size: 18px
+      font-weight: 400
+      flex-direction: row
+      top: auto
+      bottom: 104px
+      left: 20px
+      transform: none
+
     &:before
       content: ''
       width: 98px
@@ -211,11 +301,24 @@
       background-position: 0 0
       background-size: contain
 
+      @media (max-width: 1023px)
+        width: 55px
+        height: 55px
+        border: 1px solid #BDBDBD
+
     span
       margin-top: 15px
 
+      @media (max-width: 1023px)
+        margin-top: 0
+        margin-left: 14px
+
   &__button-more
-    // pointer-events: all
+    margin-top: 25px
+
+    @media (max-width: 1279px)
+      margin-top: 15px
+
     &:after
       content: ''
       flex: 0 0 16px
@@ -243,6 +346,9 @@
     bottom: 70px
     left: 0
     width: 100%
+
+    @media (max-width: 1023px)
+      display: none
 
     i
       font-style: normal
