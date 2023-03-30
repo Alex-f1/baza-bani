@@ -1,0 +1,232 @@
+.catalog
+  padding-top: 35px
+  padding-bottom: 39px
+
+  h2
+    font-size: 40px
+    color: #0C0C0C
+    font-family: $fonts.headings
+    font-weight: 700
+    line-height: 1.2
+    text-align: center
+    margin-top: 0
+    margin-bottom: 50px
+
+    @media (max-width: 767px)
+      font-size: 30px
+      margin-bottom: 36px
+
+  &__items
+    display: flex
+    flex-wrap: wrap
+    margin-left: -39px
+
+    @media (max-width: 1279px)
+      margin-left: -15px
+
+  &__item
+    width: 25%
+    padding-left: 39px
+    margin-bottom: 38px
+
+    @media (max-width: 1279px)
+      width: 50%
+      padding-left: 15px
+
+    @media (max-width: 639px)
+      margin-bottom: 27px
+
+    @media (max-width: 374px)
+      width: 100%
+
+    &--extra
+      width: 33.333%
+
+      @media (max-width: 639px)
+        width: 100%
+        margin-bottom: 32px
+
+      .catalog-thumb
+        height: 363px
+
+        @media (max-width: 639px)
+          height: 327px
+
+        &__body
+          @media (max-width: 639px)
+            margin-bottom: 0
+
+        &__img-wrapper
+          @media (max-width: 639px)
+            padding-right: 16px
+            padding-bottom: 16px
+
+        &__name
+          margin-bottom: 13px
+
+          @media (max-width: 639px)
+            margin-bottom: 5px
+
+        &__go
+          bottom: 25px
+
+        &__info
+          display: none
+
+.catalog-thumb
+  text-decoration: none
+  display: flex
+  // max-width: 256px
+  width: 100%
+  height: 479px
+
+  @media (max-width: 639px)
+    height: 340px
+
+  @media (max-width: 374px)
+    height: 420px
+
+  &:hover
+    & ^[0]
+      &__img
+        transform: scale(0.85)
+
+      &__go
+        opacity: 1
+
+  &__body
+    width: 100%
+    display: flex
+    flex-direction: column
+    position: relative
+
+    @media (max-width: 1279px)
+      margin-bottom: 24px
+
+    @media (max-width: 639px)
+      margin-bottom: 20px
+
+  &__content
+    margin-bottom: 18px
+    display: flex
+    flex-direction: column
+
+    @media (max-width: 639px)
+      margin-bottom: 13px
+
+  &__name
+    font-size: 22px
+    color: #0C0C0C
+    font-family: $fonts.headings
+    font-weight: 700
+    line-height: 1
+    margin-top: 0
+    margin-bottom: 9px
+
+    @media (max-width: 639px)
+      font-size: 16px
+
+  &__desc
+    font-size: 18px
+    color: #0C0C0C
+    font-weight: 400
+    line-height: 1.1
+
+    @media (max-width: 639px)
+      font-size: 16px
+
+  &__img-wrapper
+    padding-right: 15px
+    padding-bottom: 15px
+    width: 100%
+    height: 100%
+    border-right: 0.8px solid #000
+    border-bottom: 0.8px solid #000
+    display: flex
+
+    @media (max-width: 639px)
+      padding-right: 10px
+      padding-bottom: 10px
+
+  &__img
+    width: 100%
+    height: 100%
+    transform-origin: top left
+    transition: transform 0.5s
+    position: relative
+
+    img
+      vertical-align: top
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))
+
+  &__go
+    font-size: 16px
+    color: #3AA531
+    font-family: $fonts.headings
+    font-weight: 600
+    line-height: 1
+    white-space: nowrap
+    display: flex
+    align-items: center
+    position: absolute
+    bottom: 50px
+    left: 50%
+    transform: translateX(-50%)
+    z-index: -1
+    opacity: 0
+    transition: opacity 1s
+
+    @media (max-width: 639px)
+      font-size: 14px
+      bottom: 20px
+
+    &:after
+      content: ''
+      flex: 0 0 13px
+      width: 13px
+      max-width: 13px
+      height: 12px
+      margin-left: 5px
+      background-image: url("data:image/svg+xml,%3Csvg width='13' height='12' viewBox='0 0 13 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.8291 1L11.9996 6L6.8291 11' stroke='%233AA531' stroke-width='1.19959' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.9999 6L1 6' stroke='%233AA531' stroke-width='1.19959' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-position: 0 0
+      background-size: contain
+
+  &__info
+    font-size: 16px
+    color: #0C0C0C
+    font-weight: 400
+    line-height: 1.1
+    position: absolute
+    bottom: -24px
+    left: 0
+    display: flex
+
+    @media (min-width: 1280px)
+      left: -102px
+      bottom: 94px
+      transform: rotate(-90deg)
+
+    @media (max-width: 639px)
+      font-size: 14px
+      bottom: -20px
+
+    span
+      margin-right: 25px
+
+      @media (max-width: 639px)
+        margin-right: 12px
+
+      &:last-child
+        margin-right: 0
