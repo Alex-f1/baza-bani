@@ -1,0 +1,273 @@
+.projects-block
+  padding-bottom: 16px
+
+  h2
+    font-size: 40px
+    color: #0C0C0C
+    font-family: $fonts.headings
+    font-weight: 700
+    line-height: 1.2
+    text-align: center
+    margin-top: 0
+    margin-bottom: 31px
+
+    @media (max-width: 767px)
+      font-size: 30px
+      margin-bottom: 25px
+
+  &__navigation
+    width: 100%
+    // display: flex
+    padding-bottom: 22px
+    margin-bottom: 40px
+
+    .swiper-slide
+      width: auto
+      display: flex
+
+    a
+      font-size: 20px
+      color: #4B4A4A
+      font-weight: 450
+      line-height: 1.2
+      text-decoration: none
+      border-bottom: 2px solid transparent
+      transition: color 0.3s, border-color 0.3s
+      padding-bottom: 6px
+      margin-right: 40px
+      flex: 0 0 auto
+
+      &:last-child
+        margin-right: 0
+
+      &._is-active
+        pointer-events: none
+        color: #3aa531
+        border-color: #3AA531
+
+      &:hover
+        color: #3aa531
+        border-color: #3AA531
+
+    .swiper-scrollbar-horizontal
+      height: 8px
+      background-color: #E4E4E4
+      border-radius: 50px
+      overflow: hidden
+
+      &:after
+        content: ''
+        position: absolute
+        top: 0
+        right: 0
+        width: 5px
+        height: 100%
+        border-radius: 50px
+        background-color: #E4E4E4
+        z-index: 2
+
+      .swiper-scrollbar-drag
+        top: 2.2px
+        height: 4px
+        background-color: #3AA531
+        border-radius: 50px
+        margin-left: 5px
+        margin-right: 5px
+        z-index: 1
+
+  &__items
+    display: flex
+    flex-wrap: wrap
+    margin-left: -30px
+
+    @media (max-width: 959px)
+      margin-left: -20px
+
+  &__item
+    width: 33.333%
+    padding-left: 30px
+    margin-bottom: 27px
+    display: flex
+
+    @media (max-width: 1279px)
+      width: 50%
+
+    @media (max-width: 959px)
+      padding-left: 20px
+      margin-bottom: 17px
+
+    @media (max-width: 639px)
+      width: 100%
+
+  &__bottom
+    padding-top: 15px
+    display: flex
+    justify-content: center
+
+.project-thumb
+  width: 100%
+  height: 382px
+  text-decoration: none
+  display: flex
+  position: relative
+  border-radius: 10px
+  overflow: hidden
+  background-repeat: no-repeat
+  background-position: 0 0
+  background-size: cover
+
+  @media (max-width: 959px)
+    height: 350px
+
+  &:hover
+    & ^[0]
+      &__img
+        img
+          transform: scale(1.02)
+
+      &__name
+        color: #3aa531
+
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(359.63deg, #000000 34.38%, rgba(0, 0, 0, 0) 66.29%)
+
+  &__body
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    padding: 24px 22px 18px 22px
+    position: relative
+    z-index: 2
+
+    @media (max-width: 959px)
+      padding-top: 22px
+      padding-bottom: 16px
+
+  &__info
+    display: flex
+    align-items: center
+    margin-bottom: 8px
+
+  &__likes
+    font-size: 14px
+    color: #BDBDBD
+    font-weight: 500
+    line-height: 1
+    display: flex
+    align-items: center
+    position: relative
+    flex: 0 0 58px
+    width: 58px
+    max-width: 58px
+    height: 36px
+    margin-right: 28px
+
+    @media (max-width: 639px)
+      margin-right: 25px
+
+    &:before
+      content: ''
+      flex: 0 0 16px
+      width: 16px
+      max-width: 16px
+      height: 15px
+      margin-right: 6px
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='15' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.9857 0.561523C10.424 0.561523 9.08547 1.45361 8.41618 2.73599C7.74689 1.45361 6.40832 0.561523 4.84666 0.561523C2.67148 0.561523 0.942493 2.28995 0.886719 4.40867C0.886719 8.42308 8.41618 14.3889 8.41618 14.3889C8.41618 14.3889 16.0014 8.42308 16.0014 4.40867C15.8899 2.23419 14.1609 0.561523 11.9857 0.561523Z' fill='%233AA531'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-position: 0 0
+      background-size: contain
+
+    &:after
+      content: ''
+      position: absolute
+      top: 2px
+      left: -6px
+      width: 100%
+      height: 100%
+      background-image: url("data:image/svg+xml,%3Csvg width='59' height='36' viewBox='0 0 59 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28.49 33.3122L28.4856 33.3037L28.4808 33.2954C27.8905 32.2626 26.7995 31.5612 25.5471 31.5612H3.4317C1.80119 31.5612 0.5 30.2602 0.5 28.6306V3.43059C0.5 1.801 1.80119 0.5 3.4317 0.5H54.5683C56.195 0.5 57.5032 1.7985 57.5424 3.43641V28.6306C57.5424 30.2602 56.2412 31.5612 54.6107 31.5612H34.1899C32.9621 31.5612 31.8049 32.2007 31.2451 33.3158L30.2323 35.2564C30.2321 35.2569 30.2318 35.2575 30.2315 35.258C30.0804 35.5383 29.6568 35.5383 29.5056 35.2581C29.5053 35.2575 29.505 35.257 29.5047 35.2564L28.49 33.3122Z' stroke='%23BDBDBD'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-position: 0 0
+      background-size: contain
+
+  &__views
+    font-size: 14px
+    color: #BDBDBD
+    font-weight: 500
+    line-height: 1
+    display: flex
+    align-items: center
+    margin-right: 28px
+
+    @media (max-width: 639px)
+      margin-right: 25px
+
+    &:before
+      content: ''
+      flex: 0 0 15px
+      width: 15px
+      max-width: 15px
+      height: 10px
+      margin-right: 5px
+      background-image: url("data:image/svg+xml,%3Csvg width='15' height='10' viewBox='0 0 15 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.49995 1C9.42143 1 11.0536 1.95455 12.066 2.77273C13.285 3.72727 13.9049 4.65909 14.0702 5C13.9049 5.36364 13.285 6.27273 12.066 7.22727C11.033 8.04545 9.42143 9 7.49995 9C5.57848 9 3.94626 8.04545 2.93387 7.22727C1.71487 6.27273 1.09503 5.34091 0.929746 5C1.09503 4.63636 1.71487 3.72727 2.93387 2.77273C3.96692 1.95455 5.59914 1 7.49995 1ZM7.49995 0C3.36775 0 0 4 0 5C0 6 3.36775 10 7.49995 10C11.6528 10 14.9999 6 14.9999 5C15.0206 4 11.6528 0 7.49995 0ZM7.49995 2C5.9917 2 4.7727 3.34091 4.7727 5C4.7727 6.65909 5.9917 8 7.49995 8C9.00821 8 10.2272 6.65909 10.2272 5C10.2479 3.34091 9.00821 2 7.49995 2Z' fill='%233AA531'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-position: 0 0
+      background-size: contain
+
+  &__tag
+    font-size: 14px
+    color: #BDBDBD
+    font-weight: 500
+    line-height: 1
+    flex: 0 0 58px
+    width: 58px
+    max-width: 58px
+    height: 36px
+    border: 1px solid #BDBDBD
+    border-radius: 3px
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-left: auto
+
+    &--hit
+      color: #FF0000
+
+  &__img
+    text-align: center
+    margin-bottom: 6px
+
+    img
+      vertical-align: top
+      transition: transform 0.5s
+
+  &__name
+    font-size: 18px
+    color: #F5F5F5
+    font-weight: 400
+    line-height: 1.3
+    text-align: center
+    transition: color 0.3s
+
+    @media (max-width: 959px)
+      font-size: 16px
+
+  &__bottom
+    font-size: 20px
+    color: #F5F5F5
+    font-weight: 450
+    line-height: 1.3
+    border-top: 1px solid #4B4A4A
+    padding-top: 20px
+    display: flex
+    justify-content: space-between
+
+    @media (max-width: 959px)
+      font-size: 18px
+      padding-top: 18px

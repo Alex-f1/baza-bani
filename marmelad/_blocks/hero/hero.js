@@ -4,6 +4,7 @@ const numberZero = item.length + 1 <= 10 ? "0" : "";
 const heroSlider = new Swiper(".js-hero-slider", {
   effect: "fade",
   speed: 800,
+  rewind: true,
   autoplay: {
     delay: 3000,
   },
