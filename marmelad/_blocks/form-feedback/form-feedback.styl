@@ -1,0 +1,214 @@
+.form-feedback
+  color: #F5F5F5
+
+  @media (max-width: 1279px)
+    padding-top: 200px
+
+  @media (max-width: 639px)
+    padding-top: 80px
+
+  &__top
+    height: 500px
+    position: relative
+    background-image: url('../img/grass-pic.png')
+    background-repeat: no-repeat
+    background-position: 50% 100%
+    margin-bottom: -100px
+
+    @media (max-width: 1279px)
+      height: 290px
+      border-radius: 10px 10px 0 0
+
+    @media (max-width: 639px)
+      height: 235px
+
+    &:after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 213px
+      background-color: #0C0C0C
+      z-index: -1
+
+    & ^[0]
+      &__inner
+        max-width: 1283px
+        width: 100%
+        margin-right: auto
+        margin-left: auto
+
+  &__pic
+    max-width: 606px
+    margin-left: 80px
+
+    @media (max-width: 1279px)
+      margin-left: 40px
+      position: absolute
+      top: -200px
+      left: 0
+
+    @media (max-width: 959px)
+      margin-left: 0
+
+    @media (max-width: 639px)
+      top: -80px
+      max-width: 270px
+
+    img
+      vertical-align: top
+
+  &__form
+    position: relative
+    z-index: 5
+
+  &__container
+    background-color: #0C0C0C
+    padding-bottom: 68px
+
+    & ^[0]
+      &__inner
+        max-width: 863px + 20px + 20px
+        margin-right: auto
+        margin-left: auto
+        padding-right: 20px
+        padding-left: 20px
+
+  &__head
+    margin-bottom: 24px
+
+    h2
+      font-size: 40px
+      color: #F5F5F5
+      font-family: $fonts.headings
+      font-weight: 700
+      line-height: 1.1
+      margin-top: 0
+      margin-bottom: 5px
+
+      @media (max-width: 639px)
+        font-size: 28px
+        margin-bottom: 10px
+
+  &__desc
+    font-size: 18px
+    color: #BDBDBD
+    font-weight: 400
+    line-height: 1.5
+
+  &__wrapper
+    display: flex
+
+    @media (max-width: 959px)
+      display: block
+
+  &__fields
+    display: flex
+    flex-wrap: wrap
+    margin-left: -30px
+
+    .input-field
+      width: 50%
+      padding-left: 30px
+
+      @media (max-width: 767px)
+        width: 100%
+
+  &__buttons
+    margin-left: 30px
+    flex: 0 0 auto
+
+    @media (max-width: 959px)
+      margin-left: 0
+
+    .file-field
+      margin-bottom: 38px
+
+      @media (max-width: 959px)
+        margin-bottom: 15px
+
+    .privacy-policy
+      @media (min-width: 960px)
+        margin-top: 13px
+        transform: translateX(-295px)
+
+      @media (max-width: 959px)
+        margin-top: 10px
+
+.input-field
+  margin-bottom: 36px
+
+  input
+    font-size: 18px
+    color: #BDBDBD
+    font-weight: 400
+    line-height: 1
+    width: 100%
+    border: none
+    background-color: transparent
+    border-bottom: 1px solid #BDBDBD
+    padding-bottom: 13px
+    outline: none !important
+
+  ::placeholder
+    font-size: 18px
+    color: #BDBDBD
+    font-weight: 400
+    line-height: 1
+
+.privacy-policy
+  font-size: 14px
+  color: #BDBDBD
+  font-weight: 400
+  line-height: 1.2
+  display: flex
+  align-items: center
+
+  a
+    color: #BDBDBD
+    text-decoration: none
+    transition: color 0.3s
+
+    &:hover
+      color: #3aa531
+
+  &:before
+    content: ''
+    flex: 0 0 16px
+    width: 16px
+    max-width: 16px
+    height: 14px
+    margin-right: 6px
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.8719 0.870235C15.1524 1.13309 15.1524 1.55926 14.8719 1.82211L7.69013 8.55288C7.40966 8.81573 6.95493 8.81573 6.67447 8.55288L4.51992 6.53365C4.23945 6.2708 4.23945 5.84463 4.51992 5.58177C4.80039 5.31892 5.25512 5.31892 5.53558 5.58177L7.1823 7.12507L13.8563 0.870235C14.1368 0.607382 14.5915 0.607382 14.8719 0.870235Z' fill='%23BDBDBD'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.15455 1.34615C1.96407 1.34615 1.7814 1.41707 1.64671 1.54329C1.51203 1.66952 1.43636 1.84072 1.43636 2.01923V11.4423C1.43636 11.6208 1.51203 11.792 1.64671 11.9182C1.7814 12.0445 1.96407 12.1154 2.15455 12.1154H12.2091C12.3996 12.1154 12.5822 12.0445 12.7169 11.9182C12.8516 11.792 12.9273 11.6208 12.9273 11.4423V6.73077C12.9273 6.35904 13.2488 6.05769 13.6455 6.05769C14.0421 6.05769 14.3636 6.35904 14.3636 6.73077V11.4423C14.3636 11.9778 14.1366 12.4914 13.7326 12.8701C13.3285 13.2488 12.7805 13.4615 12.2091 13.4615H2.15455C1.58312 13.4615 1.03511 13.2488 0.631052 12.8701C0.226996 12.4914 0 11.9778 0 11.4423V2.01923C0 1.4837 0.226996 0.970098 0.631052 0.591419C1.03511 0.21274 1.58312 0 2.15455 0H10.0545C10.4512 0 10.7727 0.301347 10.7727 0.673077C10.7727 1.04481 10.4512 1.34615 10.0545 1.34615H2.15455Z' fill='%23BDBDBD'/%3E%3C/svg%3E%0A")
+    background-repeat: no-repeat
+    background-position: 0 0
+    background-size: contain
+
+.file-field
+  position: relative
+
+  .input-file
+    width: 0.1px
+    height: 0.1px
+    opacity: 0
+    overflow: hidden
+    position: absolute
+    z-index: -1
+
+  label
+    font-size: 14px
+    color: #BDBDBD
+    font-weight: 400
+    line-height: 1.2
+    display: flex
+    align-items: center
+    cursor: pointer
+
+    i
+      flex: 0 0 24px
+      width: 24px
+      max-width: 24px
+      height: 23px
+      margin-right: 10px
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='23' viewBox='0 0 24 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.18934 2.57728C4.47064 2.3077 4.85217 2.15625 5.25 2.15625H14.25C14.4489 2.15625 14.6397 2.23198 14.7803 2.36677L20.0303 7.39802C20.171 7.53281 20.25 7.71563 20.25 7.90625V19.4062C20.25 19.7875 20.092 20.1531 19.8107 20.4227C19.5294 20.6923 19.1478 20.8438 18.75 20.8438H5.25C4.85218 20.8438 4.47065 20.6923 4.18934 20.4227C3.90804 20.1531 3.75 19.7875 3.75 19.4062V3.59375C3.75 3.2125 3.90804 2.84687 4.18934 2.57728ZM13.9393 3.59375L5.25 3.59375L5.25 19.4062H18.75V8.20397L13.9393 3.59375Z' fill='%23BDBDBD'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.25 2.15625C14.6642 2.15625 15 2.47805 15 2.875V7.1875H19.5C19.9142 7.1875 20.25 7.5093 20.25 7.90625C20.25 8.3032 19.9142 8.625 19.5 8.625H14.25C13.8358 8.625 13.5 8.3032 13.5 7.90625V2.875C13.5 2.47805 13.8358 2.15625 14.25 2.15625Z' fill='%23BDBDBD'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.4697 10.273C11.7626 9.99233 12.2374 9.99233 12.5303 10.273L15.1553 12.7886C15.4482 13.0693 15.4482 13.5244 15.1553 13.8051C14.8624 14.0858 14.3876 14.0858 14.0947 13.8051L12 11.7977L9.90533 13.8051C9.61244 14.0858 9.13756 14.0858 8.84467 13.8051C8.55178 13.5244 8.55178 13.0693 8.84467 12.7886L11.4697 10.273Z' fill='%23BDBDBD'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12 10.0625C12.4142 10.0625 12.75 10.3843 12.75 10.7812V16.5312C12.75 16.9282 12.4142 17.25 12 17.25C11.5858 17.25 11.25 16.9282 11.25 16.5312V10.7812C11.25 10.3843 11.5858 10.0625 12 10.0625Z' fill='%23BDBDBD'/%3E%3C/svg%3E%0A")
