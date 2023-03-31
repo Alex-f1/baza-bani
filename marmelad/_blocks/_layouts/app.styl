@@ -34,7 +34,7 @@ html, body
 
   &.button-default--fill
     color: #3AA531
-    background-color #0C0C0C
+    background-color: #0C0C0C
     border-color: #0C0C0C
 
     &:hover
@@ -46,3 +46,14 @@ html, body
     color: #3AA531
     border-color: #3AA531
     background-color: transparent
+
+.main-bg
+  background-image: url('../img/bg.png')
+  background-repeat: no-repeat
+  background-position: 50% 30%
+  background-size: auto
+  position: relative
+
+  @media (max-width: 767px)
+    background: url('../img/bg-mobile.png') no-repeat 50% 0, url('../img/bg-mobile2.png') no-repeat 50% 100%
+    background-size: 100%
