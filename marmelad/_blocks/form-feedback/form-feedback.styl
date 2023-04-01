@@ -139,6 +139,14 @@
 .input-field
   margin-bottom: 36px
 
+  &._is-error
+    input
+      color: #FF0000
+      border-bottom-color: #FF0000
+
+    ::placeholder
+      color: #FF0000
+
   input
     font-size: 18px
     color: #BDBDBD
@@ -148,7 +156,8 @@
     border: none
     background-color: transparent
     border-bottom: 1px solid #BDBDBD
-    padding-bottom: 13px
+    height: 43px
+    padding: 0 0 13px 0
     outline: none !important
 
   ::placeholder
@@ -156,6 +165,74 @@
     color: #BDBDBD
     font-weight: 400
     line-height: 1
+
+  select
+    opacity: 0
+    visibility: hidden
+
+  .choices
+    height: 100%
+
+    &.is-open
+      &:after
+        margin-top: 0
+
+    &:after
+      content: ''
+      width: 14px
+      height: 8px
+      border: none
+      right: 0
+      top: 13px
+      margin-top: 0
+      pointer-events: all
+      background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L7 7L13 1' stroke='%23BDBDBD' stroke-width='1.78125' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-position: 0 0
+      background-size: contain
+
+    .choices__inner
+      font-size: 18px
+      color: #BDBDBD
+      font-weight: 400
+      line-height: 1
+      background-color: transparent
+      border: none
+      border-bottom: 1px solid #BDBDBD
+      border-radius: 0
+      padding: 6px 0 13px 0
+      min-height: auto
+      height: 100%
+      outline: none !important
+
+    .choices__list--single
+      padding: 0
+
+      .choices__placeholder
+        color: #bdbdbd
+        opacity: 1
+
+    .choices__list--dropdown
+      margin-top: 2px
+      background-color: #000
+      border: none
+
+      .choices__item
+        font-size: 18px
+        color: #FFFFFF
+        font-weight: 400
+        line-height: 1.5
+        padding: 5px !important
+
+        &.choices__placeholder
+          display: none
+
+        &:after
+          display: none
+
+        &.is-highlighted
+          color: #3AA531
+          background-color: transparent !important
 
 .privacy-policy
   font-size: 14px

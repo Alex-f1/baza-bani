@@ -36,8 +36,10 @@ phoneInput.forEach(function(element) {
   });
 })
 
-
-
+const element = document.querySelector('.js-choice');
+const choices = new Choices(element, {
+  searchEnabled: false,
+});
 
 if (document.querySelectorAll('.input-file').length) {
   inputFile();
