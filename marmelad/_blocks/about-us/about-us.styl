@@ -1,0 +1,146 @@
+.about-us
+  color: #F5F5F5
+  padding-top: 52px
+  background-color: #0C0C0C
+  overflow: hidden
+
+  @media (max-width: 959px)
+    padding-top: 39px
+
+  h2
+    font-size: 40px
+    color: #F5F5F5
+    font-family: $fonts.headings
+    font-weight: 700
+    line-height: 1.2
+    text-align: center
+    margin-top: 0
+    margin-bottom: 70px
+
+    @media (max-width: 959px)
+      font-size: 30px
+      margin-bottom: 37px
+
+  p
+    font-size: 20px
+    color: #F5F5F5
+    font-weight: 400
+    line-height: 1.2
+    margin-top: 0
+    margin-bottom: 0
+
+    @media (max-width: 959px)
+      font-size: 18px
+
+  &__cols
+    display: flex
+    align-items: center
+    justify-content: space-between
+    counter-reset: list-number
+    position: relative
+    padding-bottom: 75px
+
+    @media (max-width: 767px)
+      flex-wrap: wrap
+      padding-bottom: 25px
+
+    &:after
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 568px
+      height: 485px
+      transform: translate(-50%, -50%)
+      background: radial-gradient(50.12% 50.1% at 50% 49.9%, rgba(12, 12, 12, 0) 0%, #0C0C0C 100%)
+      background-image: url('../img/about-us-bg.jpg')
+      background-repeat: no-repeat
+      background-position: 0 0
+
+      @media (max-width: 767px)
+        width: 449px
+        height: 383px
+        background-size: contain
+        margin-top: 80px
+
+  &__col
+    width: 450px
+    position: relative
+    z-index: 2
+
+    @media (max-width: 959px)
+      width: 360px
+
+    @media (max-width: 767px)
+      width: 100%
+
+  &__item
+    margin-bottom: 30px
+
+  &__name
+    font-size: 20px
+    color: #3AA531
+    font-weight: 400
+    line-height: 1.2
+    margin-bottom: 16px
+
+    &:before
+      content: '0' counter(list-number)
+      counter-increment: list-number
+      margin-right: 7px
+
+  &__content
+    display: flex
+    position: relative
+    z-index: 2
+
+  &__text
+    padding-top: 70px
+    padding-bottom: 70px
+
+    @media (max-width: 959px)
+      padding-top: 0
+
+    @media (max-width: 767px)
+      max-width: 435px
+
+    h2
+      text-align: left
+      margin-bottom: 28px
+
+    p
+      margin-bottom: 25px
+
+      &:nth-last-child(2)
+        @media (max-width: 767px)
+          padding-right: 100px
+
+  &__button-more
+    margin-top: 15px
+
+  &__img
+    flex: 0 0 540px
+    width: 540px
+    max-width: 540px
+    align-self: flex-end
+
+    @media (max-width: 959px)
+      flex: 0 0 440px
+      width: 440px
+      max-width: 440px
+
+    @media (max-width: 767px)
+      flex: 0 0 240px
+      width: 240px
+      max-width: 240px
+      position: absolute
+      bottom: -50px
+      right: -50px
+
+    @media (max-width: 374px)
+      width: 180px
+      bottom: -20px
+      right: -45px
+
+    img
+      vertical-align: top
