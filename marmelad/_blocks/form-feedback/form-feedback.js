@@ -40,6 +40,10 @@ const element = document.querySelector('.js-choice');
 const choices = new Choices(element, {
   searchEnabled: false,
 });
+const elementPopup = document.querySelector('.js-choice-popup');
+const choicesPopup = new Choices(elementPopup, {
+  searchEnabled: false,
+});
 
 if (document.querySelectorAll('.input-file').length) {
   inputFile();
