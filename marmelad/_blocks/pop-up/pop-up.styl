@@ -1,5 +1,10 @@
 .pop-up
   color: #F5F5F5
+  z-index: 500 !important
+
+  &--video
+    .hystmodal__window
+      width: 1280px
 
   .form-feedback
     &.form-feedback--dark
@@ -34,6 +39,25 @@
     @media (max-width: 959px)
       margin-top: 25px
       margin-bottom: 26px
+
+  &__video
+    height: 640px
+
+    @media (max-height: 700px)
+      height: 480px
+
+    @media (max-height: 700px) and (max-width: 1280px)
+      height: 480px
+
+    @media (max-width: 767px)
+      height: 360px
+    @media (max-width: 479px)
+      height: 300px
+
+    iframe
+      width: 100%
+      height: 100%
+      object-fit: cover
 
 .hystmodal__wrap
   padding-right: 20px

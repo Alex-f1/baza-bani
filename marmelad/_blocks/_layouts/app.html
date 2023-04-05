@@ -56,6 +56,21 @@
 
 		{% include "pop-up.html" %}
 
+		<div block="pop-up" mods="video" class="hystmodal" id="video" aria-hidden="true">
+			<div elem="section" class="hystmodal__wrap">
+				<div elem="inner" class="hystmodal__window" role="dialog" aria-modal="true">
+					<button data-hystclose class="hystmodal__close"></button>
+					<div elem="container">		
+						<div elem="video" class="js-video-popup">
+							<iframe width="560" height="315" src="" frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- pop-up -->
+
 		<script>
 			const appSetup = {
 				base: '{{ app.pathData.base }}',
