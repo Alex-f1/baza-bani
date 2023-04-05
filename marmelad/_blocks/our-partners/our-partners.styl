@@ -1,0 +1,42 @@
+.our-partners
+  padding-top: 72px
+  padding-bottom: 57px
+
+  @media (max-width: 767px)
+    padding-top: 30px
+    padding-bottom: 15px
+
+  h2
+    font-size: 40px
+    color: #0C0C0C
+    font-family: $fonts.headings
+    font-weight: 700
+    line-height: 1.2
+    text-align: center
+    margin-top: 0
+    margin-bottom: 49px
+
+    @media (max-width: 767px)
+      font-size: 30px
+      margin-bottom: 44px
+
+  &__items
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-wrap: wrap
+    padding-bottom: 5px
+
+    @media (max-width: 1023px)
+      flex-wrap: nowrap
+      overflow-x: auto
+      justify-content: flex-start
+
+    @media (max-width: 767px)
+      margin-left: -20px
+      margin-right: -20px
+
+  &__item
+    flex: 0 0 auto
+    padding-left: 20px
+    margin-bottom: 10px
