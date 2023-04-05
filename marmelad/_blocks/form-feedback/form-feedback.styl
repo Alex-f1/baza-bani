@@ -1,5 +1,7 @@
 .form-feedback
   color: #F5F5F5
+  position: relative
+  overflow: hidden
 
   @media (max-width: 1279px)
     padding-top: 200px
@@ -7,9 +9,47 @@
   @media (max-width: 639px)
     padding-top: 80px
 
+  &:before, &:after
+    content: ''
+    position: absolute
+    bottom: 0
+    background-repeat: no-repeat
+    background-position: 0 0
+    background-size: contain
+    z-index: 5
+    pointer-events: none
+
+    @media (max-width: 1599px)
+      bottom: -50px
+
+    @media (max-width: 767px)
+      bottom: -30px
+
+  &:before
+    width: 772px
+    height: 144px
+    left: 0
+    background-image: url('../img/cloud-pic-left.png')
+    z-index: 6
+
+    @media (max-width: 479px)
+      display: none
+
+  &:after
+    width: 525px
+    height: 122px
+    right: 0
+    background-image: url('../img/cloud-pic-right.png')
+
+    @media (max-width: 767px)
+      right: -130px
+
   &--dark
     @media (max-width: 1279px)
       padding-top: 0 !important
+
+    &:before, &:after
+      display: none
 
     & ^[0]
       &__container
@@ -37,6 +77,9 @@
   &--light
     @media (max-width: 1279px)
       padding-top: 0 !important
+
+    &:before, &:after
+      display: none
 
     & ^[0]
       &__container
