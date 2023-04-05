@@ -68,3 +68,66 @@ html, body
   @media (max-width: 767px)
     background: url('../img/bg-mobile.png') no-repeat 50% 0, url('../img/bg-mobile2.png') no-repeat 50% 100%
     background-size: 100%
+
+.button-fixed
+  text-decoration: none
+  width: 70px
+  height: 70px
+  position: fixed
+  bottom: 15px
+  display: block
+  background-color: #0C0C0C
+  border: 1px solid #F5F5F5
+  border-radius: 50%
+  transition: background-color 0.3s
+  z-index: 20
+  opacity: 0
+  visibility: hidden
+  transition: opacity 0.5s, ease 0.5s
+
+  &._is-show
+    opacity: 1
+    visibility: visible
+
+  @media (max-width: 1023px)
+    display: none
+
+  &:hover
+    background-color: #3AA531
+
+  &:after
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 5
+
+  &--to-top
+    bottom: 180px
+    left: 176px
+
+    @media (max-width: 1279px)
+      bottom: 15px
+      left: 15px
+
+    &:after
+      width: 26px
+      height: 26px
+      background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.851 0.526004C13.6322 0.41326 13.384 0.349609 13.1209 0.349609C13.0023 0.349609 12.8867 0.362538 12.7755 0.387064C12.4878 0.450292 12.2143 0.593693 11.9907 0.817264L0.817186 11.9921C0.19375 12.6155 0.19375 13.6263 0.817186 14.2497C1.44062 14.8732 2.45141 14.8732 3.07485 14.2497L11.5245 5.80012V24.2957C11.5245 25.1774 12.2392 25.8921 13.1209 25.8921C14.0025 25.8921 14.7173 25.1774 14.7173 24.2957V5.80012L23.1669 14.2497C23.7903 14.8732 24.8011 14.8732 25.4246 14.2497C26.048 13.6263 26.048 12.6155 25.4246 11.9921L14.2559 0.82347C14.2329 0.800212 14.2092 0.777657 14.1848 0.755841C14.0817 0.663475 13.9694 0.586863 13.851 0.526004Z' fill='%23F5F5F5'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-position: 0 0
+      background-size: contain
+
+  &--call
+    right: 176px
+    bottom: 50px
+
+    @media (max-width: 1279px)
+      right: 15px
+      bottom: 15px
+
+    &:after
+      width: 23px
+      height: 23px
+      background-image: url("data:image/svg+xml,%3Csvg width='23' height='23' viewBox='0 0 23 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.8829 15.4446L16.4813 13.1412C16.2026 13.0163 15.8966 12.9645 15.5923 12.9907C15.288 13.0168 14.9954 13.1202 14.7422 13.2909L11.8513 15.2143C10.0895 14.3586 8.66296 12.9402 7.79722 11.1832L9.7091 8.25784C9.87868 8.00431 9.98225 7.71245 10.0104 7.40874C10.0386 7.10503 9.99042 6.7991 9.87034 6.51872L7.55536 1.1171C7.39382 0.752362 7.1203 0.448562 6.77446 0.249757C6.42862 0.0509511 6.02845 -0.0325241 5.63197 0.0114364C4.07666 0.215183 2.64826 0.976786 1.61234 2.15465C0.576412 3.33251 0.00345791 4.84647 0 6.41506C0 15.5598 7.44019 23 16.5849 23C18.1535 22.9965 19.6675 22.4236 20.8454 21.3877C22.0232 20.3517 22.7848 18.9233 22.9886 17.368C23.0325 16.9716 22.949 16.5714 22.7502 16.2255C22.5514 15.8797 22.2476 15.6062 21.8829 15.4446Z' fill='%23F5F5F5'/%3E%3C/svg%3E%0A")

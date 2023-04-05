@@ -26,3 +26,15 @@ if (window.NodeList && !NodeList.prototype.forEach) {
  * ========================================================================== */
 
 //=require ../_blocks/**/*.js
+
+const buttonFixed = document.querySelectorAll(".button-fixed");
+window.addEventListener("scroll", function() {
+  buttonFixed.forEach(function (element) {
+    if (window.scrollY > 200) {
+      element.classList.add("_is-show")
+    } else {
+      element.classList.remove("_is-show")
+    }
+  });
+
+});

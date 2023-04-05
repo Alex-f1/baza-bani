@@ -7,10 +7,14 @@ const reviewBlockSlider = new Swiper(".js-reviews-block-slider", {
     el: ".main-swiper-pagination",
     clickable: true,
   },
-  // navigation: {
-  //   nextEl: ".swiper-button-next",
-  //   prevEl: ".swiper-button-prev",
-  // },
+  breakpoints: {
+    320: {
+      allowTouchMove: true,
+    },
+    1280: {
+      allowTouchMove: false,
+    },
+  },
 });
 
 const buttonPrev = document.querySelector(".js-swiper-button-prev"); 
