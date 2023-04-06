@@ -50,25 +50,32 @@ function inputFile() {
   });
 }
 
-const phoneInput = document.querySelectorAll(".phone-mask");
-phoneInput.forEach(function (element) {
-  var phoneMask = IMask(element, {
-    mask: '+{7} (000)-000-00-00',
-    lazy: false,
-    placeholderChar: '_'
+function phoneMask() {
+  const phoneInput = document.querySelectorAll(".phone-mask");
+  phoneInput.forEach(function (element) {
+    var phoneMask = IMask(element, {
+      mask: '+{7} (000)-000-00-00',
+      lazy: false,
+      placeholderChar: '_'
+    });
   });
-});
-const element = document.querySelector('.js-choice');
-const choices = new Choices(element, {
-  searchEnabled: false
-});
-const elementPopup = document.querySelector('.js-choice-popup');
-const choicesPopup = new Choices(elementPopup, {
-  searchEnabled: false
-});
+}
+
+function customSelect() {
+  const select = document.querySelectorAll('.js-choice');
+  select.forEach(function (element) {
+    const choices = new Choices(element, {
+      searchEnabled: false
+    });
+  });
+}
 
 if (document.querySelectorAll('.input-file').length) {
   inputFile();
+}
+
+if (document.querySelectorAll('.js-choice').length) {
+  customSelect();
 }
 
 const item = document.querySelectorAll(".hero__item");
