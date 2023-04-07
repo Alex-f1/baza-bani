@@ -1,0 +1,7 @@
+<div block="bread-crumbs">
+	{% for item in path %}
+		<a elem="link" href="index.html">{{item.title}}</a><!-- link -->
+		<span elem="separator"> &mdash; </span><!-- separator -->
+	{% endfor %}
+	<span elem="page-title">{{page.title}}</span>
+</div><!-- bread-crumbs -->

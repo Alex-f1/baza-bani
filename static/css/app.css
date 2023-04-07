@@ -635,6 +635,15 @@ body {
   height: 23px;
   background-image: url("data:image/svg+xml,%3Csvg width='23' height='23' viewBox='0 0 23 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.8829 15.4446L16.4813 13.1412C16.2026 13.0163 15.8966 12.9645 15.5923 12.9907C15.288 13.0168 14.9954 13.1202 14.7422 13.2909L11.8513 15.2143C10.0895 14.3586 8.66296 12.9402 7.79722 11.1832L9.7091 8.25784C9.87868 8.00431 9.98225 7.71245 10.0104 7.40874C10.0386 7.10503 9.99042 6.7991 9.87034 6.51872L7.55536 1.1171C7.39382 0.752362 7.1203 0.448562 6.77446 0.249757C6.42862 0.0509511 6.02845 -0.0325241 5.63197 0.0114364C4.07666 0.215183 2.64826 0.976786 1.61234 2.15465C0.576412 3.33251 0.00345791 4.84647 0 6.41506C0 15.5598 7.44019 23 16.5849 23C18.1535 22.9965 19.6675 22.4236 20.8454 21.3877C22.0232 20.3517 22.7848 18.9233 22.9886 17.368C23.0325 16.9716 22.949 16.5714 22.7502 16.2255C22.5514 15.8797 22.2476 15.6062 21.8829 15.4446Z' fill='%23F5F5F5'/%3E%3C/svg%3E%0A");
 }
+.inner-top h1 {
+  font-size: 40px;
+  color: #000;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
 .about-us {
   color: #f5f5f5;
   padding-top: 52px;
@@ -728,6 +737,327 @@ body {
 }
 .about-us__img img {
   vertical-align: top;
+}
+.bread-crumbs {
+  font-size: 16px;
+  color: #4b4a4a;
+  font-weight: 300;
+  line-height: 1.2;
+  flex: none;
+  padding-top: 160px;
+  padding-bottom: 40px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.bread-crumbs a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s;
+}
+.bread-crumbs a:hover {
+  color: #3aa531;
+}
+.bread-crumbs__separator {
+  color: #000;
+  margin-left: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+}
+.card-project {
+  background-color: #0c0c0c;
+}
+.card-project__first-screen {
+  color: #f5f5f5;
+  background-color: #000;
+  background-image: url("../img/card-project-hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  padding-bottom: 60px;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+.card-project__first-screen:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 54%;
+  height: 301px;
+  background: linear-gradient(-3deg, #101313 2.25%, rgba(22,27,25,0) 61.91%);
+}
+.card-project__first-screen .bread-crumbs {
+  padding-top: 180px;
+  color: #f5f5f5;
+  position: relative;
+  z-index: 2;
+}
+.card-project__first-screen .bread-crumbs a {
+  color: #bdbdbd;
+}
+.card-project__first-screen .bread-crumbs a:hover {
+  color: #3aa531;
+}
+.card-project__first-screen .bread-crumbs__separator {
+  color: #bdbdbd;
+}
+.card-project-hero {
+  position: relative;
+  z-index: 2;
+}
+.card-project-hero__container {
+  position: relative;
+}
+.card-project-hero__content {
+  padding-top: 47px;
+}
+.card-project-hero__content h1 {
+  font-size: 40px;
+  color: #f5f5f5;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 33px;
+  max-width: 504px;
+}
+.card-project-hero__price {
+  font-size: 18px;
+  color: #f5f5f5;
+  font-weight: 450;
+  line-height: 1.1;
+  margin-bottom: 48px;
+}
+.card-project-hero__price span {
+  font-size: 28px;
+  font-weight: 500;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.card-project-hero__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+.card-project-hero__buttons a,
+.card-project-hero__buttons button {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+.card-project-hero__buttons a:last-child,
+.card-project-hero__buttons button:last-child {
+  margin-right: 0;
+}
+.card-project-hero__button-checkout:after {
+  content: '';
+  flex: 0 0 16px;
+  width: 16px;
+  max-width: 16px;
+  height: 15px;
+  margin-left: 10px;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='15' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.4043 1L14.7499 7.34565L8.4043 13.6913' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.7499 7.3457L1.25 7.3457' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  transition: background 0.3s;
+}
+.card-project-hero__button-checkout:hover:after {
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='15' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.4043 1L14.7499 7.34565L8.4043 13.6913' stroke='%233AA531' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.7499 7.3457L1.25 7.3457' stroke='%233AA531' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+.card-project-hero__info {
+  font-size: 18px;
+  color: #bdbdbd;
+  font-weight: 400;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card-project-hero__info span {
+  margin-right: 60px;
+  margin-bottom: 10px;
+}
+.card-project-hero__info span:last-child {
+  margin-right: 0;
+}
+.card-project-hero__views {
+  padding-left: 25px;
+  position: relative;
+}
+.card-project-hero__views:before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 12px;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='12' viewBox='0 0 20 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.69866 1.2C12.1834 1.2 14.2942 2.34545 15.6033 3.32727C17.1797 4.47273 17.9813 5.59091 18.195 6C17.9813 6.43636 17.1797 7.52727 15.6033 8.67273C14.2674 9.65455 12.1834 10.8 9.69866 10.8C7.21388 10.8 5.10315 9.65455 3.79397 8.67273C2.2176 7.52727 1.41606 6.40909 1.20231 6C1.41606 5.56364 2.2176 4.47273 3.79397 3.32727C5.12987 2.34545 7.2406 1.2 9.69866 1.2ZM9.69866 0C4.35504 0 0 4.8 0 6C0 7.2 4.35504 12 9.69866 12C15.069 12 19.3973 7.2 19.3973 6C19.424 4.8 15.069 0 9.69866 0ZM9.69866 2.4C7.74824 2.4 6.17187 4.00909 6.17187 6C6.17187 7.99091 7.74824 9.6 9.69866 9.6C11.6491 9.6 13.2254 7.99091 13.2254 6C13.2522 4.00909 11.6491 2.4 9.69866 2.4Z' fill='%23BDBDBD'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.card-project-hero__img {
+  width: 100%;
+  max-width: 688px;
+}
+.card-project-hero__img img {
+  vertical-align: top;
+}
+.card-project-info {
+  padding-top: 45px;
+  padding-bottom: 20px;
+  color: #bdbdbd;
+  position: relative;
+}
+.card-project-info:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 118px;
+  background: linear-gradient(180deg, #0c0c0c 0%, rgba(12,12,12,0) 120%);
+  z-index: 2;
+}
+.card-project-info__items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -152px;
+}
+.card-project-info__item {
+  flex: 0 0 auto;
+  padding-left: 152px;
+  margin-bottom: 30px;
+}
+.card-project-info__body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-project-info__body h3 {
+  font-size: 28px;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.card-project-info__body p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.card-project-view {
+  padding-top: 50px;
+  padding-bottom: 15px;
+}
+.card-project-view__items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+}
+.card-project-view__item {
+  width: 33.333%;
+  padding-left: 30px;
+  margin-bottom: 30px;
+}
+.card-project-view__body {
+  border: 0.5px solid #4b4a4a;
+  border-radius: 10px;
+  padding: 17px;
+}
+.card-project-view__img {
+  overflow: hidden;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+.card-project-view__img:before {
+  content: '';
+  display: block;
+  padding-top: 80%;
+}
+.card-project-view__img img {
+  vertical-align: top;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card-project-completed {
+  padding-top: 45px;
+  padding-bottom: 40px;
+}
+.card-project-completed h3 {
+  font-size: 36px;
+  color: #f5f5f5;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.card-project-completed__items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -17px;
+}
+.card-project-completed__item {
+  width: 14.285%;
+  padding-left: 17px;
+  margin-bottom: 17px;
+}
+.card-project-completed__item--last-more .card-project-completed__img span {
+  font-size: 22px;
+  color: #f5f5f5;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.card-project-completed__item--last-more .card-project-completed__img:after {
+  z-index: 1;
+  background: linear-gradient(0deg, rgba(0,0,0,0.8), rgba(0,0,0,0.8));
+}
+.card-project-completed__img {
+  overflow: hidden;
+  position: relative;
+  display: block;
+  -webkit-overflow-scrolling: touch;
+}
+.card-project-completed__img:before {
+  content: '';
+  display: block;
+  padding-top: 80%;
+}
+.card-project-completed__img:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+  z-index: 2;
+}
+.card-project-completed__img img {
+  vertical-align: top;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .catalog {
   padding-top: 35px;
@@ -3358,6 +3688,11 @@ body {
   }
 }
 @media (min-width: 960px) {
+  .card-project-hero__img {
+    position: absolute;
+    top: 0;
+    right: -140px;
+  }
   .form-feedback__buttons .privacy-policy {
     margin-top: 13px;
     transform: translateX(-295px);
@@ -3461,6 +3796,23 @@ body {
   .button-fixed--call {
     right: 15px;
     bottom: 15px;
+  }
+  .card-project-hero__img {
+    max-width: 560px;
+  }
+  .card-project-info__items {
+    margin-left: -40px;
+  }
+  .card-project-info__item {
+    padding-left: 40px;
+    flex: 1 1 auto;
+  }
+  .card-project-info__body {
+    display: block;
+    text-align: left;
+  }
+  .card-project-completed__item--last-more .card-project-completed__img span {
+    font-size: 18px;
   }
   .catalog__items {
     margin-left: -15px;
@@ -3599,6 +3951,9 @@ body {
   }
   .button-fixed {
     display: none;
+  }
+  .bread-crumbs {
+    padding-bottom: 25px;
   }
   .gallery-block__photo-item {
     width: 100%;
@@ -3754,6 +4109,52 @@ body {
     flex: 0 0 440px;
     width: 440px;
     max-width: 440px;
+  }
+  .card-project__first-screen:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -140px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(283.67deg, #000 30.02%, rgba(0,0,0,0) 85.84%);
+  }
+  .card-project__first-screen:after {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #0c0e0c 45.22%, rgba(22,27,25,0) 74.88%);
+  }
+  .card-project__first-screen .bread-crumbs {
+    padding-top: 160px;
+  }
+  .card-project-hero__content {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-project-hero__price {
+    order: 1;
+    margin-bottom: 30px;
+  }
+  .card-project-hero__buttons {
+    order: 1;
+    margin-bottom: 0;
+  }
+  .card-project-hero__info {
+    margin-bottom: 20px;
+  }
+  .card-project-hero__info span {
+    margin-right: 15px;
+  }
+  .card-project-hero__img {
+    margin-bottom: 40px;
+    max-width: 100%;
+  }
+  .card-project-view {
+    padding-top: 20px;
+  }
+  .card-project-view__item {
+    width: 50%;
   }
   .form-feedback__pic {
     margin-left: 0;
@@ -3992,6 +4393,10 @@ body {
     background: url("../img/bg-mobile.png") no-repeat 50% 0, url("../img/bg-mobile2.png") no-repeat 50% 100%;
     background-size: 100%;
   }
+  .inner-top h1 {
+    font-size: 30px;
+    margin-bottom: 24px;
+  }
   .about-us__cols {
     flex-wrap: wrap;
     padding-bottom: 25px;
@@ -4018,6 +4423,53 @@ body {
     position: absolute;
     bottom: -50px;
     right: -50px;
+  }
+  .card-project-hero__content h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .card-project-hero__price span {
+    font-size: 22px;
+  }
+  .card-project-hero__buttons a,
+  .card-project-hero__buttons button {
+    margin-right: 12px;
+  }
+  .card-project-hero__button-question,
+  .card-project-hero__button-download {
+    font-size: 16px;
+  }
+  .card-project-hero__info {
+    font-size: 14px;
+  }
+  .card-project-info__item:nth-child(3) {
+    order: 1;
+  }
+  .card-project-info__item:nth-child(4) {
+    order: 1;
+  }
+  .card-project-info__body h3 {
+    font-size: 22px;
+  }
+  .card-project-completed h3 {
+    font-size: 28px;
+    margin-bottom: 27px;
+  }
+  .card-project-completed__items {
+    margin-left: -7px;
+  }
+  .card-project-completed__item {
+    width: 25%;
+    padding-left: 7px;
+    margin-bottom: 7px;
+  }
+  .card-project-completed__item:nth-child(4),
+  .card-project-completed__item:nth-child(5),
+  .card-project-completed__item:nth-child(6) {
+    display: none;
+  }
+  .card-project-completed__item--last-more .card-project-completed__img span {
+    font-size: 14px;
   }
   .catalog h2 {
     font-size: 30px;
@@ -4421,6 +4873,10 @@ body {
   .footer:before {
     display: none;
   }
+  .card-project-view__item {
+    width: 100%;
+    margin-bottom: 17px;
+  }
   .form-feedback:before {
     display: none;
   }
@@ -4466,6 +4922,16 @@ body {
     width: 180px;
     bottom: -20px;
     right: -45px;
+  }
+  .card-project-info__item {
+    flex: none;
+    width: 50%;
+  }
+  .card-project-completed__item {
+    width: 33.333%;
+  }
+  .card-project-completed__item:nth-child(3) {
+    display: none;
   }
   .catalog__item {
     width: 100%;

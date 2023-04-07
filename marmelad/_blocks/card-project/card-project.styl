@@ -1,0 +1,437 @@
+.card-project
+  background-color: #0C0C0C
+
+  &__first-screen
+    color: #F5F5F5
+    background-color: #000
+    background-image: url('../img/card-project-hero-bg.jpg')
+    background-repeat: no-repeat
+    background-position: 50% 0
+    background-size: cover
+    padding-bottom: 60px
+    overflow-x: hidden
+    position: relative
+
+    &:before
+      @media (max-width: 959px)
+        content: ''
+        position: absolute
+        top: 0
+        right: -140px
+        width: 100%
+        height: 100%
+        background: linear-gradient(283.67deg, #000000 30.02%, rgba(0, 0, 0, 0) 85.84%)
+
+    &:after
+      content: ''
+      position: absolute
+      bottom: 0
+      right: 0
+      width: 54%
+      height: 301px
+      background: linear-gradient(-3deg, #101313 2.25%, rgba(22, 27, 25, 0) 61.91%)
+
+      @media (max-width: 959px)
+        width: 100%
+        height: 100%
+        background: linear-gradient(0deg, #0c0e0c 45.22%, rgba(22, 27, 25, 0) 74.88%)
+
+    .bread-crumbs
+      padding-top: 180px
+      color: #F5F5F5
+      position: relative
+      z-index: 2
+
+      @media (max-width: 959px)
+        padding-top: 160px
+
+      a
+        color: #BDBDBD
+
+        &:hover
+          color: #3AA531
+
+      &__separator
+        color: #BDBDBD
+
+.card-project-hero
+  position: relative
+  z-index: 2
+
+  &__container
+    position: relative
+
+  &__content
+    padding-top: 47px
+
+    @media (max-width: 959px)
+      padding-top: 15px
+      display: flex
+      flex-direction: column
+
+    h1
+      font-size: 40px
+      color: #F5F5F5
+      font-family: $fonts.headings
+      font-weight: 700
+      line-height: 1.2
+      margin-top: 0
+      margin-bottom: 33px
+      max-width: 504px
+
+      @media (max-width: 767px)
+        font-size: 30px
+        margin-bottom: 20px
+
+  &__price
+    font-size: 18px
+    color: #F5F5F5
+    font-weight: 450
+    line-height: 1.1
+    margin-bottom: 48px
+
+    @media (max-width: 959px)
+      order: 1
+      margin-bottom: 30px
+
+    span
+      font-size: 28px
+      font-weight: 500
+      margin-left: 8px
+      margin-right: 8px
+
+      @media (max-width: 767px)
+        font-size: 22px
+
+  &__buttons
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 50px
+
+    @media (max-width: 959px)
+      order: 1
+      margin-bottom: 0
+
+    a, button
+      margin-right: 15px
+      margin-bottom: 15px
+
+      @media (max-width: 767px)
+        margin-right: 12px
+
+      &:last-child
+        margin-right: 0
+
+  &__button-checkout
+    &:after
+      content: ''
+      flex: 0 0 16px
+      width: 16px
+      max-width: 16px
+      height: 15px
+      margin-left: 10px
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='15' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.4043 1L14.7499 7.34565L8.4043 13.6913' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.7499 7.3457L1.25 7.3457' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-position: 0 0
+      background-size: contain
+      transition: background 0.3s
+
+    &:hover
+      &:after
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='15' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.4043 1L14.7499 7.34565L8.4043 13.6913' stroke='%233AA531' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.7499 7.3457L1.25 7.3457' stroke='%233AA531' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+
+  &__button-question, &__button-download
+    @media (max-width: 767px)
+      font-size: 16px
+
+  &__info
+    font-size: 18px
+    color: #BDBDBD
+    font-weight: 400
+    line-height: 1.2
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+
+    @media (max-width: 959px)
+      margin-bottom: 20px
+
+    @media (max-width: 767px)
+      font-size: 14px
+
+    span
+      margin-right: 60px
+      margin-bottom: 10px
+
+      @media (max-width: 959px)
+        margin-right: 15px
+
+      &:last-child
+        margin-right: 0
+
+  &__views
+    padding-left: 25px
+    position: relative
+
+    &:before
+      content: ''
+      position: absolute
+      top: 2px
+      left: 0
+      width: 20px
+      height: 12px
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='12' viewBox='0 0 20 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.69866 1.2C12.1834 1.2 14.2942 2.34545 15.6033 3.32727C17.1797 4.47273 17.9813 5.59091 18.195 6C17.9813 6.43636 17.1797 7.52727 15.6033 8.67273C14.2674 9.65455 12.1834 10.8 9.69866 10.8C7.21388 10.8 5.10315 9.65455 3.79397 8.67273C2.2176 7.52727 1.41606 6.40909 1.20231 6C1.41606 5.56364 2.2176 4.47273 3.79397 3.32727C5.12987 2.34545 7.2406 1.2 9.69866 1.2ZM9.69866 0C4.35504 0 0 4.8 0 6C0 7.2 4.35504 12 9.69866 12C15.069 12 19.3973 7.2 19.3973 6C19.424 4.8 15.069 0 9.69866 0ZM9.69866 2.4C7.74824 2.4 6.17187 4.00909 6.17187 6C6.17187 7.99091 7.74824 9.6 9.69866 9.6C11.6491 9.6 13.2254 7.99091 13.2254 6C13.2522 4.00909 11.6491 2.4 9.69866 2.4Z' fill='%23BDBDBD'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-position: 0 0
+      background-size: contain
+
+  &__img
+    width: 100%
+    max-width: 688px
+
+    @media (min-width: 960px)
+      position: absolute
+      top: 0
+      right: -140px
+
+    @media (max-width: 1279px)
+      max-width: 560px
+
+    @media (max-width: 959px)
+      margin-bottom: 40px
+      max-width: 100%
+
+    img
+      vertical-align: top
+
+.card-project-info
+  padding-top: 45px
+  padding-bottom: 20px
+  color: #BDBDBD
+  position: relative
+
+  // box-shadow: 8px 90px 60px 0px #121212
+  &:after
+    content: ''
+    position: absolute
+    top: 100%
+    left: 0
+    width: 100%
+    height: 118px
+    background: linear-gradient(180deg, #0C0C0C 0%, rgba(12, 12, 12, 0) 120%)
+    z-index: 2
+
+  &__items
+    display: flex
+    flex-wrap: wrap
+    margin-left: -152px
+
+    @media (max-width: 1279px)
+      margin-left: -40px
+
+  &__item
+    flex: 0 0 auto
+    padding-left: 152px
+    margin-bottom: 30px
+
+    @media (max-width: 1279px)
+      padding-left: 40px
+      flex: 1 1 auto
+
+    @media (max-width: 374px)
+      flex: none
+      width: 50%
+
+    &:nth-child(3)
+      @media (max-width: 767px)
+        order: 1
+
+    &:nth-child(4)
+      @media (max-width: 767px)
+        order: 1
+
+  &__body
+    text-align: center
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    @media (max-width: 1279px)
+      display: block
+      text-align: left
+
+    h3
+      font-size: 28px
+      font-family: $fonts.headings
+      font-weight: 700
+      line-height: 1.3
+      margin-top: 0
+      margin-bottom: 15px
+
+      @media (max-width: 767px)
+        font-size: 22px
+
+    p
+      font-size: 18px
+      font-weight: 400
+      line-height: 1.1
+      margin-top: 0
+      margin-bottom: 0
+
+.card-project-view
+  padding-top: 50px
+  padding-bottom: 15px
+
+  @media (max-width: 959px)
+    padding-top: 20px
+
+  &__items
+    display: flex
+    flex-wrap: wrap
+    margin-left: -30px
+
+  &__item
+    width: 33.333%
+    padding-left: 30px
+    margin-bottom: 30px
+
+    @media (max-width: 959px)
+      width: 50%
+
+    @media (max-width: 479px)
+      width: 100%
+      margin-bottom: 17px
+
+  &__body
+    border: 0.5px solid #4B4A4A
+    border-radius: 10px
+    padding: 17px
+
+  &__img
+    // padding: 17px
+    // height: 297px
+    // border: 0.5px solid #4B4A4A
+    // border-radius: 10px
+    // position: relative
+
+    // img
+    // vertical-align: top
+    // position: absolute
+    // top: 50%
+    // left: 50%
+    // transform: translate(-50%, -50%)
+    overflow: hidden
+    position: relative
+
+    &:before
+      content: ''
+      display: block
+      padding-top: 80%
+
+    img
+      vertical-align: top
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+
+.card-project-completed
+  padding-top: 45px
+  padding-bottom: 40px
+
+  h3
+    font-size: 36px
+    color: #F5F5F5
+    font-family: $fonts.headings
+    font-weight: 700
+    line-height: 1.3
+    text-align: center
+    margin-top: 0
+    margin-bottom: 30px
+
+    @media (max-width: 767px)
+      font-size: 28px
+      margin-bottom: 27px
+
+  &__items
+    display: flex
+    flex-wrap: wrap
+    margin-left: -17px
+
+    @media (max-width: 767px)
+      margin-left: -7px
+
+  &__item
+    width: 14.285%
+    padding-left: 17px
+    margin-bottom: 17px
+
+    @media (max-width: 767px)
+      width: 25%
+      padding-left: 7px
+      margin-bottom: 7px
+
+    @media (max-width: 374px)
+      width: 33.333%
+
+    &:nth-child(4), &:nth-child(5), &:nth-child(6)
+      @media (max-width: 767px)
+        display: none
+
+    &:nth-child(3)
+      @media (max-width: 374px)
+        display: none
+
+    &--last-more
+      & ^[0]
+        &__img
+          span
+            font-size: 22px
+            color: #F5F5F5
+            font-family: $fonts.headings
+            font-weight: 500
+            line-height: 1
+            text-align: center
+            width: 100%
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            z-index: 2
+
+            @media (max-width: 1279px)
+              font-size: 18px
+
+            @media (max-width: 767px)
+              font-size: 14px
+
+          &:after
+            z-index: 1
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))
+
+  &__img
+    overflow: hidden
+    position: relative
+    display: block
+
+    &:before
+      content: ''
+      display: block
+      padding-top: 80%
+
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))
+      z-index: 2
+
+    img
+      vertical-align: top
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)

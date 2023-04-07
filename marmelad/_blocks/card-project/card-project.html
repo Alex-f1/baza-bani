@@ -1,0 +1,164 @@
+<section block="card-project">
+  <div elem="section">
+    <div elem="inner">
+      <div elem="first-screen">
+        <div block="inner-top">
+          <div elem="section">
+            <div elem="inner" class="contain">
+              {% include "bread-crumbs.html" %}
+            </div>
+          </div>
+        </div><!-- inner-top -->
+        <div block="card-project-hero">
+          <div elem="section">
+            <div elem="inner" class="contain">
+              <div elem="container">
+                <div elem="content">
+                  <h1>
+                    Одноэтажная каркасная баня 6 на 8 с террасой «КЕДР – 8»
+                  </h1>
+                  <div elem="img">
+                    <img src="img/card-project-hero-img.png" alt="">
+                  </div>
+                  <div elem="price">
+                    от <span>1 200 000</span> руб.
+                  </div>
+                  <div elem="buttons">
+                    <a elem="button-checkout" class="button-default" href="#">
+                      <span>Оформить заказ</span>
+                    </a>
+                    <a elem="button-question" class="button-default button-default--outline" href="#">
+                      <span>Задать вопрос</span>
+                    </a>
+                    <a elem="button-download" class="button-default button-default--outline" href="#" download="">
+                      <span>Скачать КП</span>
+                    </a>
+                  </div>
+                  <div elem="info">
+                    <span>Тип: Баня</span>
+                    <span>Кол-во комнат и помещений: 5</span>
+                    <span elem="views">10586</span>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div><!-- card-project-hero -->
+      </div>
+      <div elem="info">
+        <div block="card-project-info">
+          <div elem="inner" class="contain">
+            <div elem="items">
+              <div elem="item">
+                <div elem="body">
+                  <h3>КЕДР</h3>
+                  <p>Серия проекта</p>
+                </div>
+              </div>
+              <div elem="item">
+                <div elem="body">
+                  <h3>8</h3>
+                  <p>Артикул</p>
+                </div>
+              </div>
+              <div elem="item">
+                <div elem="body">
+                  <h3>Каркас</h3>
+                  <p>Технология</p>
+                </div>
+              </div>
+              <div elem="item">
+                <div elem="body">
+                  <h3>Одноэтажный</h3>
+                  <p>Этажность</p>
+                </div>
+              </div>
+              <div elem="item">
+                <div elem="body">
+                  <h3>84 м2</h3>
+                  <p>Площадь</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- card-project-info -->
+        <div block="card-project-view">
+          <div elem="inner" class="contain">
+            <div elem="items">
+              <div elem="item">
+                <div elem="body">
+                  <div elem="img">
+                    <img src="img/card-project-view-img.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div elem="item">
+                <div elem="body">
+                  <div elem="img">
+                    <img src="img/card-project-view-img2.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div elem="item">
+                <div elem="body">
+                  <div elem="img">
+                    <img src="img/card-project-view-img3.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- card-project-view -->
+        <div block="card-project-completed">
+          <!-- 
+            !!!Важное замечание!!!
+            
+            В этом блоке на мобильниках скрываются промежуточные элементы с изображениями(по макету). Я скрываю их через стили на разрешении 767px и ниже по средством дочерних элементов ":nth-child(4), :nth-child(5), :nth-child(6)", и на разрешении 374px и меньше, скрываю еще один ":nth-child(3)". Знаю, что этот подход не надежный. Скорее всего уже на бэкенде будут подгружаться ножное количество элементов. Тогда нужно будет "выпилить" эти стили. Если что, сообщите мне об этом. Все это сделано, что бы соответствовать макету и несет только визуальный характер.    
+           -->
+          <div elem="inner" class="contain">
+            <h3>Фото построенных бань</h3>
+            <div elem="items">
+              <div elem="item">
+                <a elem="img" href="#">
+                  <img src="img/card-project-completed-img.jpg" alt="">
+                </a>
+              </div>
+              <div elem="item">
+                <a elem="img" href="#">
+                  <img src="img/card-project-completed-img2.jpg" alt="">
+                </a>
+              </div>
+              <div elem="item">
+                <a elem="img" href="#">
+                  <img src="img/card-project-completed-img3.jpg" alt="">
+                </a>
+              </div>
+              <div elem="item">
+                <a elem="img" href="#">
+                  <img src="img/card-project-completed-img4.jpg" alt="">
+                </a>
+              </div>
+              <div elem="item">
+                <a elem="img" href="#">
+                  <img src="img/card-project-completed-img5.jpg" alt="">
+                </a>
+              </div>
+              <div elem="item">
+                <a elem="img" href="#">
+                  <img src="img/card-project-completed-img6.jpg" alt="">
+                </a>
+              </div>
+              <div elem="item" mods="last-more">
+                <a elem="img" href="#">
+                  <img src="img/card-project-completed-img7.jpg" alt="">
+                  <span>+ 5 фото</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div><!-- card-project-completed-photos -->
+      </div>
+    </div>
+  </div>
+</section><!-- card-project -->
