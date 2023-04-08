@@ -57,7 +57,7 @@
   &__info
     background-image: url('../img/card-project-bg.png')
     background-repeat: no-repeat
-    background-position: 64% -160%
+    background-position: 64% -160px
 
     @media (max-width: 959px)
       background: none
@@ -746,6 +746,7 @@
     position: relative
     cursor: pointer
     overflow: hidden
+    transition: background-color 0.3s
 
     @media (max-width: 1023px)
       width: 100%
@@ -786,12 +787,14 @@
 
         strong
           font-size: 22px
+          transition: color 0.3s
 
           @media (min-width: 640px)
             font-size: 28px
 
       &__price
         font-size: 18px
+        transition: color 0.3s
 
         @media (min-width: 640px)
           font-size: 22px
@@ -843,6 +846,7 @@
     font-weight: 400
     line-height: 1
     position: relative
+    transition: color 0.3s
 
     @media (max-width: 639px)
       font-size: 16px
