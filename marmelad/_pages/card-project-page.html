@@ -34,4 +34,39 @@ body:
 
 	{% include "other-projects.html" %}
 
+  <div block="form-feedback" mods="light-bg">
+    <div elem="section">
+      <div elem="inner">
+        <form elem="form">
+          <div elem="container">
+            <div elem="inner">
+              <div elem="head">
+                <h2>Остались вопросы <br>
+                  или хотите обсудить детали?</h2>
+              </div>
+              <div elem="wrapper">
+                <div elem="fields">
+                  <div class="input-field">
+                    <input type="text" placeholder="Имя">
+                  </div>
+                  <div class="input-field">
+                    <input type="tel" class="phone-mask" placeholder="+7 (___) - ___-__-__">
+                  </div>
+                </div>
+                <div elem="buttons">
+                  <button elem="button-send" class="button-default button-default--fill" type="submit">
+                    <span>Отправить на БАZУ</span>
+                  </button>
+                  <div class="privacy-policy">
+                    <span>Согласен с <a href="#">политикой конфиденциальности</a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div><!-- form-feedback -->
+
 {% endblock %}

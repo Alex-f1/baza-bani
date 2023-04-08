@@ -114,6 +114,69 @@
 
       &__head
         h2
+          color: #0c0c0c
+          text-align: left
+
+      &__wrapper
+        max-width: 1071px
+
+      &__fields
+        width: 100%
+        align-self: flex-end
+
+  &--light-bg
+    @media (max-width: 1279px)
+      padding-top: 0 !important
+
+    &:before, &:after
+      display: none
+
+    & ^[0]
+      &__container
+        padding-top: 80px
+        padding-bottom: 85px
+        background-color: #fff
+        background-image: url('../img/form-feedback-light-bg.png')
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: 100% 50%
+
+        @media (max-width: 767px)
+          padding-top: 63px
+          padding-bottom: 50px
+          background-image: url('../img/form-feedback-light-bg-mobile.png')
+          background-position: 0 0
+
+        .form-feedback__inner
+          max-width: 1210px
+          width: 100%
+          padding-right: 20px
+          padding-left: 20px
+          margin: 0 auto
+
+        .input-field
+          input
+            color: #4B4A4A
+
+          ::placeholder
+            color: #4B4A4A
+
+        .privacy-policy
+          transform: translateX(0)
+          color: #4B4A4A
+
+          &:before
+            background-image: url("data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.8719 0.87022C15.1524 1.13307 15.1524 1.55924 14.8719 1.82209L7.69013 8.55286C7.40966 8.81572 6.95493 8.81572 6.67447 8.55286L4.51992 6.53363C4.23945 6.27078 4.23945 5.84461 4.51992 5.58176C4.80039 5.31891 5.25512 5.31891 5.53558 5.58176L7.1823 7.12505L13.8563 0.87022C14.1368 0.607367 14.5915 0.607367 14.8719 0.87022Z' fill='%234B4A4A'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.15455 1.34615C1.96407 1.34615 1.7814 1.41707 1.64671 1.54329C1.51203 1.66952 1.43636 1.84072 1.43636 2.01923V11.4423C1.43636 11.6208 1.51203 11.792 1.64671 11.9182C1.7814 12.0445 1.96407 12.1154 2.15455 12.1154H12.2091C12.3996 12.1154 12.5822 12.0445 12.7169 11.9182C12.8516 11.792 12.9273 11.6208 12.9273 11.4423V6.73077C12.9273 6.35904 13.2488 6.05769 13.6455 6.05769C14.0421 6.05769 14.3636 6.35904 14.3636 6.73077V11.4423C14.3636 11.9778 14.1366 12.4914 13.7326 12.8701C13.3285 13.2488 12.7805 13.4615 12.2091 13.4615H2.15455C1.58312 13.4615 1.03511 13.2488 0.631052 12.8701C0.226996 12.4914 0 11.9778 0 11.4423V2.01923C0 1.4837 0.226996 0.970098 0.631052 0.591419C1.03511 0.21274 1.58312 0 2.15455 0H10.0545C10.4512 0 10.7727 0.301347 10.7727 0.673077C10.7727 1.04481 10.4512 1.34615 10.0545 1.34615H2.15455Z' fill='%234B4A4A'/%3E%3C/svg%3E%0A")
+
+          a
+            color: #4B4A4A
+
+            &:hover
+              color: #3aa531
+
+      &__head
+        h2
+          color: #0c0c0c
           text-align: left
 
       &__wrapper
