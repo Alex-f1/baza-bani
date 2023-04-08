@@ -2817,6 +2817,65 @@ body {
   border-bottom: 1px solid transparent;
   transition: color 0.3s, border-color 0.3s;
 }
+.other-projects {
+  padding-top: 60px;
+  padding-bottom: 74px;
+}
+.other-projects h2 {
+  font-size: 40px;
+  color: #0c0c0c;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 45px;
+}
+.other-projects__inner {
+  max-width: 1245px;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.other-projects__container {
+  overflow: visible;
+}
+.other-projects__container .swiper-button-disabled {
+  pointer-events: none !important;
+}
+.other-projects__container .swiper-button-prev,
+.other-projects__container .swiper-button-next {
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  background-color: #bdbdbd;
+  transition: background-color 0.3s, border-color 0.3s;
+  pointer-events: all;
+  display: flex !important;
+}
+.other-projects__container .swiper-button-prev:hover,
+.other-projects__container .swiper-button-next:hover {
+  background-color: #3aa531;
+  border-color: #3aa531;
+}
+.other-projects__container .swiper-button-prev:after,
+.other-projects__container .swiper-button-next:after {
+  content: '';
+  width: 9px;
+  height: 15px;
+  background-image: url("data:image/svg+xml,%3Csvg width='9' height='15' viewBox='0 0 9 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.46484 13.5703L7.53516 7.5L1.46484 1.42969' stroke='white' stroke-width='1.15625' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.other-projects__container .swiper-button-prev {
+  left: -15px;
+}
+.other-projects__container .swiper-button-prev:after {
+  transform: rotate(180deg);
+}
+.other-projects__container .swiper-button-next {
+  right: -15px;
+}
 .our-advantages {
   padding-top: 93px;
   padding-bottom: 79px;
@@ -5249,6 +5308,23 @@ body {
     font-size: 30px;
     margin-bottom: 34px;
   }
+  .other-projects {
+    padding-bottom: 15px;
+  }
+  .other-projects h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  .other-projects__container .swiper-button-prev,
+  .other-projects__container .swiper-button-next {
+    border: 1px solid #4b4a4a;
+  }
+  .other-projects__container .swiper-button-prev {
+    left: -8px;
+  }
+  .other-projects__container .swiper-button-next {
+    right: -8px;
+  }
   .our-advantages {
     padding-top: 33px;
     padding-bottom: 12px;
@@ -5550,6 +5626,9 @@ body {
   }
   .info-work__item {
     width: 100% !important;
+  }
+  .other-projects h2 {
+    text-align: left;
   }
   .projects-block__item {
     width: 100%;

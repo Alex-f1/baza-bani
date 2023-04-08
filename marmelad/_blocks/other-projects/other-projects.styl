@@ -1,0 +1,73 @@
+.other-projects
+  padding-top: 60px
+  padding-bottom: 74px
+
+  @media (max-width: 767px)
+    padding-bottom: 15px
+
+  h2
+    font-size: 40px
+    color: #0C0C0C
+    font-family: $fonts.headings
+    font-weight: 700
+    line-height: 1.2
+    text-align: center
+    margin-top: 0
+    margin-bottom: 45px
+
+    @media (max-width: 767px)
+      font-size: 30px
+      margin-bottom: 30px
+
+    @media (max-width: 639px)
+      text-align: left
+
+  &__inner
+    max-width: 1245px
+    overflow: hidden
+
+  &__container
+    overflow: visible
+
+    .swiper-button-disabled
+      pointer-events: none !important
+
+    .swiper-button-prev, .swiper-button-next
+      width: 37px
+      height: 37px
+      border-radius: 50%
+      background-color: #BDBDBD
+      transition: background-color 0.3s, border-color 0.3s
+      pointer-events: all
+      display: flex !important
+
+      @media (max-width: 767px)
+        border: 1px solid #4B4A4A
+
+      &:hover
+        background-color: #3AA531
+        border-color: #3AA531
+
+      &:after
+        content: ''
+        width: 9px
+        height: 15px
+        background-image: url("data:image/svg+xml,%3Csvg width='9' height='15' viewBox='0 0 9 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.46484 13.5703L7.53516 7.5L1.46484 1.42969' stroke='white' stroke-width='1.15625' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+        background-repeat: no-repeat
+        background-position: 0 0
+        background-size: contain
+
+    .swiper-button-prev
+      left: -15px
+
+      @media (max-width: 767px)
+        left: -8px
+
+      &:after
+        transform: rotate(180deg)
+
+    .swiper-button-next
+      right: -15px
+
+      @media (max-width: 767px)
+        right: -8px
