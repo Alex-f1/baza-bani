@@ -534,9 +534,11 @@
     flex-wrap: wrap
     justify-content: center
     margin-left: -26px
+    animation: fadeOut 0.3s ease-in
 
     &._is-show
       display: flex
+      animation: fadeIn 0.3s ease-in
 
   &__img
     width: 50%
@@ -869,12 +871,14 @@
   &__info
     display: none
     overflow-x: auto
+    animation: fadeOut 0.3s ease-in
 
     @media (max-width: 1023px)
       margin-right: -20px
 
     &._is-show
       display: block
+      animation: fadeIn 0.3s ease-in
 
   &__info-table
     @media (max-width: 1023px)
@@ -1028,9 +1032,13 @@
       margin-right: -20px
 
   &__info-table
-    height: 545px
+    // height: 545px
     overflow: hidden
     position: relative
+
+    &._is-collapsed
+      &:after
+        display: block
 
     @media (max-width: 479px)
       width: 480px
@@ -1044,6 +1052,7 @@
       height: 142px
       background: linear-gradient(186.04deg, rgba(255, 255, 255, 0) -28.88%, #FFFFFF 85.11%)
       z-index: 10
+      display: none
 
   &__table-row
     display: flex
@@ -1080,9 +1089,12 @@
       display: block
 
   &__bottom
-    display: flex
+    display: none
     justify-content: center
     padding-top: 20px
+
+    &._is-show
+      display: flex
 
 .card-project-note
   padding-top: 62px
@@ -1148,3 +1160,17 @@
   &__button-calculation
     margin-bottom: 20px
     display: flex
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1
+
+@keyframes fadeOut
+  0%
+    opacity: 1
+
+  100%
+    opacity: 0
