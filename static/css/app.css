@@ -583,6 +583,10 @@ body {
   background-size: auto;
   position: relative;
 }
+.main-bg .projects-block {
+  padding-top: 79px;
+  padding-bottom: 42px;
+}
 .button-fixed {
   text-decoration: none;
   width: 70px;
@@ -1859,6 +1863,21 @@ body {
 }
 .catalog-thumb__info span:last-child {
   margin-right: 0;
+}
+.filter--single .filter__container {
+  align-items: center;
+}
+.filter--single .filter__options {
+  margin-left: -40px;
+  margin-right: 137px;
+}
+.filter--single .filter__option {
+  width: auto;
+  flex: 0 0 auto;
+  padding-left: 40px;
+}
+.filter--single .filter__buttons {
+  margin-bottom: 13px;
 }
 .filter h3 {
   font-size: 22px;
@@ -3774,9 +3793,8 @@ body {
   color: #bdbdbd;
   font-weight: 500;
   line-height: 1;
-  flex: 0 0 58px;
-  width: 58px;
-  max-width: 58px;
+  min-width: 58px;
+  padding: 7px 10px;
   height: 36px;
   border: 1px solid #bdbdbd;
   border-radius: 3px;
@@ -3787,6 +3805,18 @@ body {
 }
 .project-thumb__tag--hit {
   color: #f00;
+}
+.project-thumb__tag--gift {
+  color: #dfb007;
+}
+.project-thumb__tag--cashback {
+  color: #3aa531;
+}
+.project-thumb__tag--discount {
+  color: #8731a5;
+}
+.project-thumb__tag--share {
+  color: #48f;
 }
 .project-thumb__img {
   text-align: center;
@@ -4834,6 +4864,9 @@ body {
   .catalog-thumb__body {
     margin-bottom: 24px;
   }
+  .filter--single .filter__options {
+    margin-right: 50px;
+  }
   .filter__options {
     margin-left: -20px;
   }
@@ -5447,6 +5480,10 @@ body {
     background: url("../img/bg-mobile.png") no-repeat 50% 0, url("../img/bg-mobile2.png") no-repeat 50% 100%;
     background-size: 100% 50%;
   }
+  .main-bg .projects-block {
+    padding-top: 34px;
+    padding-bottom: 35px;
+  }
   .inner-top h1 {
     font-size: 30px;
     margin-bottom: 24px;
@@ -5580,6 +5617,13 @@ body {
   .catalog h2 {
     font-size: 30px;
     margin-bottom: 36px;
+  }
+  .filter--single .filter__options {
+    margin-right: 0;
+  }
+  .filter--single .filter__option {
+    flex: none;
+    width: 50%;
   }
   .filter h3 {
     font-size: 20px;
@@ -6159,6 +6203,9 @@ body {
   }
   .catalog-thumb {
     height: 420px;
+  }
+  .filter--single .filter__option {
+    width: 100%;
   }
   .filter__option {
     width: 100%;
