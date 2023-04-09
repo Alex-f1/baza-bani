@@ -95,6 +95,6 @@ function additionalOptions() {
   }
 }
 
-if (document.querySelectorAll(".ard-project-additional-options").length) {
+if (document.querySelectorAll(".card-project-additional-options").length) {
   additionalOptions();
 }

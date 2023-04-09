@@ -121,11 +121,11 @@ function additionalOptions() {
   }
 }
 
-if (document.querySelectorAll(".ard-project-additional-options").length) {
+if (document.querySelectorAll(".card-project-additional-options").length) {
   additionalOptions();
 }
 
-function filterNavigationScrollbar() {
+function filterNavigation() {
   const filterNavigationScrollbar = new Swiper(".js-filter-navigation-scrollbar", {
     direction: "horizontal",
     slidesPerView: "auto",
@@ -138,7 +138,7 @@ function filterNavigationScrollbar() {
 }
 
 if (document.querySelectorAll(".js-filter-navigation-scrollbar").length) {
-  filterNavigationScrollbar();
+  filterNavigation();
 }
 
 function inputFile() {
