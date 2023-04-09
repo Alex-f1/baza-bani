@@ -1,0 +1,293 @@
+---
+# JS-YAML demo
+# https://nodeca.github.io/js-yaml/
+page:
+	title: Серии и проекты бань
+	layout:
+		header: true
+		footer: true
+		left: false
+		right: false
+path: [
+	{"title": Главная},
+]    
+body:
+	classes:
+---
+
+{% extends 'app.html' %}
+
+{% block main %}
+
+  {#
+  <div block="inner-top">
+    <div elem="section">
+      <div elem="inner" class="contain">
+        {% include "bread-crumbs.html" %}
+        <h1>Акции</h1>
+      </div>
+    </div>
+  </div><!-- inner-top -->
+  #}
+
+  <div block="first-screen-inner">
+    <div elem="section">
+      <div elem="inner">
+        <div block="inner-top">
+          <div elem="section">
+            <div elem="inner" class="contain">
+              {% include "bread-crumbs.html" %}
+              <h1>Серии и проекты бань</h1>
+            </div>
+          </div>
+        </div><!-- inner-top -->
+        {% include "filter.html" %}
+      </div>
+    </div>
+  </div><!-- first-screen-inner -->
+    <div class="main-bg">
+      <section block="other-projects">
+        <div elem="section">
+          <div elem="inner" class="contain">
+            <h3>Серия «Классик»</h3>
+            <div elem="container" class="swiper js-other-projects-slider">
+              <div elem="items" class="swiper-wrapper">
+                <div elem="item" class="swiper-slide">
+                  <a block="project-thumb" href="#" style="background-image: url(img/project-thumb-bg.jpg);">
+                    <span elem="body">
+                      <span elem="info">
+                        <span elem="likes">
+                          <span>105</span>
+                        </span>
+                        <span elem="views">
+                          <span>10586</span>
+                        </span>
+                        <span elem="tag" mods="hit">ХИТ</span>
+                      </span>
+                      <span elem="img"><img src="img/project-thumb-img.png" width="326px" height="199px" alt=""></span>
+                      <h4 elem="name">Дом Вероника с сауной и террасой</h4>
+                      <span elem="bottom">
+                        <span elem="price">от 2 500 000 руб.</span>
+                        <span elem="area">120м2</span>
+                      </span>
+                    </span>
+                  </a><!-- project-thumb -->
+                </div>
+                <div elem="item" class="swiper-slide">
+                  <a block="project-thumb" href="#" style="background-image: url(img/project-thumb-bg.jpg);">
+                    <span elem="body">
+                      <span elem="info">
+                        <span elem="likes">
+                          <span>105</span>
+                        </span>
+                        <span elem="views">
+                          <span>10586</span>
+                        </span>
+                        <span elem="tag" mods="hit">ХИТ</span>
+                      </span>
+                      <span elem="img"><img src="img/project-thumb-img.png" width="326px" height="199px" alt=""></span>
+                      <h4 elem="name">Дом Вероника с сауной и террасой</h4>
+                      <span elem="bottom">
+                        <span elem="price">от 2 500 000 руб.</span>
+                        <span elem="area">120м2</span>
+                      </span>
+                    </span>
+                  </a><!-- project-thumb -->
+                </div>
+                <div elem="item" class="swiper-slide">
+                  <a block="project-thumb" href="#" style="background-image: url(img/project-thumb-bg.jpg);">
+                    <span elem="body">
+                      <span elem="info">
+                        <span elem="likes">
+                          <span>105</span>
+                        </span>
+                        <span elem="views">
+                          <span>10586</span>
+                        </span>
+                        <span elem="tag" mods="hit">ХИТ</span>
+                      </span>
+                      <span elem="img"><img src="img/project-thumb-img.png" width="326px" height="199px" alt=""></span>
+                      <h4 elem="name">Дом Вероника с сауной и террасой</h4>
+                      <span elem="bottom">
+                        <span elem="price">от 2 500 000 руб.</span>
+                        <span elem="area">120м2</span>
+                      </span>
+                    </span>
+                  </a><!-- project-thumb -->
+                </div>
+                <div elem="item" class="swiper-slide">
+                  <a block="project-thumb" href="#" style="background-image: url(img/project-thumb-bg.jpg);">
+                    <span elem="body">
+                      <span elem="info">
+                        <span elem="likes">
+                          <span>105</span>
+                        </span>
+                        <span elem="views">
+                          <span>10586</span>
+                        </span>
+                        <span elem="tag" mods="hit">ХИТ</span>
+                      </span>
+                      <span elem="img"><img src="img/project-thumb-img.png" width="326px" height="199px" alt=""></span>
+                      <h4 elem="name">Дом Вероника с сауной и террасой</h4>
+                      <span elem="bottom">
+                        <span elem="price">от 2 500 000 руб.</span>
+                        <span elem="area">120м2</span>
+                      </span>
+                    </span>
+                  </a><!-- project-thumb -->
+                </div>
+                <div elem="item" class="swiper-slide">
+                  <a block="project-thumb" href="#" style="background-image: url(img/project-thumb-bg.jpg);">
+                    <span elem="body">
+                      <span elem="info">
+                        <span elem="likes">
+                          <span>105</span>
+                        </span>
+                        <span elem="views">
+                          <span>10586</span>
+                        </span>
+                        <span elem="tag" mods="hit">ХИТ</span>
+                      </span>
+                      <span elem="img"><img src="img/project-thumb-img.png" width="326px" height="199px" alt=""></span>
+                      <h4 elem="name">Дом Вероника с сауной и террасой</h4>
+                      <span elem="bottom">
+                        <span elem="price">от 2 500 000 руб.</span>
+                        <span elem="area">120м2</span>
+                      </span>
+                    </span>
+                  </a><!-- project-thumb -->
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+            <div elem="bottom">
+              <a elem="button-more" class="button-default button-default--fill" href="#"><span>Смотреть проекты Классик</span></a>
+            </div>
+          </div>
+        </div>
+      </section><!-- other-projects -->
+      <section block="other-projects">
+        <div elem="section">
+          <div elem="inner" class="contain">
+            <h3>Серия «Кедр»</h3>
+            <div elem="container" class="swiper js-other-projects-slider">
+              <div elem="items" class="swiper-wrapper">
+                <div elem="item" class="swiper-slide">
+                  <a block="project-thumb" href="#" style="background-image: url(img/project-thumb-bg.jpg);">
+                    <span elem="body">
+                      <span elem="info">
+                        <span elem="likes">
+                          <span>105</span>
+                        </span>
+                        <span elem="views">
+                          <span>10586</span>
+                        </span>
+                        <span elem="tag" mods="hit">ХИТ</span>
+                      </span>
+                      <span elem="img"><img src="img/project-thumb-img.png" width="326px" height="199px" alt=""></span>
+                      <h4 elem="name">Дом Вероника с сауной и террасой</h4>
+                      <span elem="bottom">
+                        <span elem="price">от 2 500 000 руб.</span>
+                        <span elem="area">120м2</span>
+                      </span>
+                    </span>
+                  </a><!-- project-thumb -->
+                </div>
+                <div elem="item" class="swiper-slide">
+                  <a block="project-thumb" href="#" style="background-image: url(img/project-thumb-bg.jpg);">
+                    <span elem="body">
+                      <span elem="info">
+                        <span elem="likes">
+                          <span>105</span>
+                        </span>
+                        <span elem="views">
+                          <span>10586</span>
+                        </span>
+                        <span elem="tag" mods="hit">ХИТ</span>
+                      </span>
+                      <span elem="img"><img src="img/project-thumb-img.png" width="326px" height="199px" alt=""></span>
+                      <h4 elem="name">Дом Вероника с сауной и террасой</h4>
+                      <span elem="bottom">
+                        <span elem="price">от 2 500 000 руб.</span>
+                        <span elem="area">120м2</span>
+                      </span>
+                    </span>
+                  </a><!-- project-thumb -->
+                </div>
+                <div elem="item" class="swiper-slide">
+                  <a block="project-thumb" href="#" style="background-image: url(img/project-thumb-bg.jpg);">
+                    <span elem="body">
+                      <span elem="info">
+                        <span elem="likes">
+                          <span>105</span>
+                        </span>
+                        <span elem="views">
+                          <span>10586</span>
+                        </span>
+                        <span elem="tag" mods="hit">ХИТ</span>
+                      </span>
+                      <span elem="img"><img src="img/project-thumb-img.png" width="326px" height="199px" alt=""></span>
+                      <h4 elem="name">Дом Вероника с сауной и террасой</h4>
+                      <span elem="bottom">
+                        <span elem="price">от 2 500 000 руб.</span>
+                        <span elem="area">120м2</span>
+                      </span>
+                    </span>
+                  </a><!-- project-thumb -->
+                </div>
+                <div elem="item" class="swiper-slide">
+                  <a block="project-thumb" href="#" style="background-image: url(img/project-thumb-bg.jpg);">
+                    <span elem="body">
+                      <span elem="info">
+                        <span elem="likes">
+                          <span>105</span>
+                        </span>
+                        <span elem="views">
+                          <span>10586</span>
+                        </span>
+                        <span elem="tag" mods="hit">ХИТ</span>
+                      </span>
+                      <span elem="img"><img src="img/project-thumb-img.png" width="326px" height="199px" alt=""></span>
+                      <h4 elem="name">Дом Вероника с сауной и террасой</h4>
+                      <span elem="bottom">
+                        <span elem="price">от 2 500 000 руб.</span>
+                        <span elem="area">120м2</span>
+                      </span>
+                    </span>
+                  </a><!-- project-thumb -->
+                </div>
+                <div elem="item" class="swiper-slide">
+                  <a block="project-thumb" href="#" style="background-image: url(img/project-thumb-bg.jpg);">
+                    <span elem="body">
+                      <span elem="info">
+                        <span elem="likes">
+                          <span>105</span>
+                        </span>
+                        <span elem="views">
+                          <span>10586</span>
+                        </span>
+                        <span elem="tag" mods="hit">ХИТ</span>
+                      </span>
+                      <span elem="img"><img src="img/project-thumb-img.png" width="326px" height="199px" alt=""></span>
+                      <h4 elem="name">Дом Вероника с сауной и террасой</h4>
+                      <span elem="bottom">
+                        <span elem="price">от 2 500 000 руб.</span>
+                        <span elem="area">120м2</span>
+                      </span>
+                    </span>
+                  </a><!-- project-thumb -->
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+            <div elem="bottom">
+              <a elem="button-more" class="button-default button-default--fill" href="#"><span>Смотреть проекты Кедр</span></a>
+            </div>
+          </div>
+        </div>
+      </section><!-- other-projects -->
+    </div>
+
+{% endblock %}

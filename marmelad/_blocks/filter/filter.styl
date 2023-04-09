@@ -1,0 +1,206 @@
+.filter
+  h3
+    font-size: 22px
+    color: #F5F5F5
+    font-family: $fonts.headings
+    font-weight: 700
+    line-height: 1.2
+    margin-top: 0
+    margin-bottom: 30px
+
+    @media (max-width: 767px)
+      font-size: 20px
+
+  &__container
+    display: flex
+
+    @media (max-width: 767px)
+      display: block
+      margin-bottom: 26px
+
+  &__options
+    display: flex
+    flex-wrap: wrap
+    margin-left: -120px
+
+    @media (max-width: 1279px)
+      margin-left: -20px
+
+  &__option
+    width: 25%
+    margin-bottom: 14px
+    padding-left: 120px
+
+    @media (max-width: 1279px)
+      width: 33.333%
+      padding-left: 20px
+
+    @media (max-width: 767px)
+      width: 50%
+
+    @media (max-width: 374px)
+      width: 100%
+
+  &__buttons
+    @media (max-width: 767px)
+      padding-top: 19px
+
+  &__button-apply
+    font-size: 16px
+    padding-top: 11px
+    padding-bottom: 11px
+    min-width: 170px
+
+  &__button-reset
+    font-size: 18px
+    color: #F5F5F5
+    font-weight: 450
+    line-height: 1
+    text-align: center
+    background-color: transparent
+    border: none
+    cursor: pointer
+    transition: color 0.3s
+    padding: 11px
+    min-width: 170px
+
+    @media (max-width: 767px)
+      min-width: 100px
+
+    &:hover
+      color: #3aa531
+
+  &__navigation
+    border-top: 1px solid #4B4A4A
+    padding-top: 23px
+    padding-bottom: 20px
+    margin-top: 20px
+    display: flex
+    align-items: center
+
+    .swiper-slide
+      display: flex
+      justify-content: center
+      width: auto
+      margin-right: auto
+
+    .swiper-scrollbar-horizontal
+      height: 8px
+      background-color: #4B4A4A
+      border-radius: 50px
+      overflow: hidden
+      bottom: 0
+
+      &:after
+        content: ''
+        position: absolute
+        top: 0
+        right: 0
+        width: 5px
+        height: 100%
+        border-radius: 50px
+        background-color: #4B4A4A
+        z-index: 2
+
+      .swiper-scrollbar-drag
+        top: 2.2px
+        height: 4px
+        background-color: #3AA531
+        border-radius: 50px
+        margin-left: 5px
+        margin-right: 5px
+        z-index: 1
+
+    a
+      font-size: 20px
+      color: #BDBDBD
+      font-weight: 450
+      line-height: 1.1
+      text-decoration: none
+      flex: 0 0 auto
+      padding-bottom: 5px
+      margin-right: 60px
+      border-bottom: 2px solid transparent
+      flex: 0 0 auto
+      transition: color 0.3s, border-bottom-color 0.3s
+
+      @media (max-width: 639px)
+        margin-right: 20px
+
+      &._is-active
+        color: #3AA531
+        border-bottom-color: #3AA531
+        pointer-events: none
+
+      &:last-child
+        margin-right: 0
+
+      &:hover
+        color: #3AA531
+
+.label-control
+  position: relative
+  cursor: pointer
+
+  &:hover
+    & ^[0]
+      &__checkbox
+        span
+          color: #3aa531
+
+  input
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 0
+    visibility: hidden
+
+    &:checked ~ .label-control__checkbox
+      i
+        background-color: #3AA531
+        border-color: #3AA531
+
+        &:after
+          opacity: 1
+          visibility: visible
+
+  &__checkbox
+    display: flex
+    align-items: center
+
+    i
+      flex: 0 0 26px
+      width: 26px
+      max-width: 26px
+      height: 26px
+      border: 1.5px solid #BDBDBD
+      border-radius: 3px
+      margin-right: 14px
+      transition: background-color 0.3s, border-color 0.3s
+      position: relative
+
+      &:after
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 15px
+        height: 13px
+        background-image: url("data:image/svg+xml,%3Csvg width='15' height='13' viewBox='0 0 15 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.14154 10.2784L2.10962 6.01388C1.85578 5.74539 1.44422 5.74539 1.19038 6.01388C0.93654 6.28236 0.93654 6.71766 1.19038 6.98614L5.74037 11.7986C6.01592 12.0901 6.47034 12.0613 6.7111 11.7372L13.8611 2.11228C14.0829 1.81372 14.0338 1.38152 13.7516 1.14693C13.4693 0.912351 13.0607 0.964215 12.8389 1.26278L6.14154 10.2784Z' fill='white' stroke='white'/%3E%3C/svg%3E%0A")
+        background-repeat: no-repeat
+        background-position: 0 0
+        background-size: contain
+        opacity: 0
+        visibility: hidden
+        transition: opacity 0.3s
+
+    span
+      font-size: 18px
+      color: #F5F5F5
+      font-weight: 450
+      line-height: 1
+      transition: color 0.3s
+
+      @media (max-width: 767px)
+        font-size: 16px

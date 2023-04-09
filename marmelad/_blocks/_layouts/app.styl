@@ -70,7 +70,7 @@ html, body
 
   @media (max-width: 767px)
     background: url('../img/bg-mobile.png') no-repeat 50% 0, url('../img/bg-mobile2.png') no-repeat 50% 100%
-    background-size: 100%
+    background-size: 100% 50%
 
 .button-fixed
   text-decoration: none
@@ -148,3 +148,77 @@ html, body
     @media (max-width: 767px)
       font-size: 30px
       margin-bottom: 24px
+
+.first-screen-inner
+  color: #F5F5F5
+  padding-bottom: 60px
+  margin-bottom: 50px
+  background-color: #000
+  background-image: url('../img/first-screen-inner-bg.jpg')
+  background-repeat: no-repeat
+  background-position: 50% 0
+  background-size: cover
+  overflow: hidden
+  position: relative
+
+  &:before, &:after
+    content: ''
+    position: absolute
+    bottom: 0
+    background-repeat: no-repeat
+    background-position: 0 0
+    background-size: contain
+    z-index: 5
+    pointer-events: none
+
+    @media (max-width: 1599px)
+      bottom: -50px
+
+    @media (max-width: 767px)
+      bottom: -30px
+
+  &:before
+    width: 772px
+    height: 144px
+    left: 0
+    background-image: url('../img/cloud-pic-left.png')
+
+    @media (min-width: 1600px)
+      z-index: 100
+
+    @media (max-width: 479px)
+      display: none
+
+  &:after
+    width: 525px
+    height: 122px
+    right: 0
+    background-image: url('../img/cloud-pic-right.png')
+
+    @media (max-width: 767px)
+      right: -130px
+
+  .bread-crumbs
+    padding-top: 180px
+    color: #F5F5F5
+    position: relative
+    z-index: 2
+
+    @media (max-width: 959px)
+      padding-top: 160px
+
+    a
+      color: #BDBDBD
+
+      &:hover
+        color: #3AA531
+
+    &__separator
+      color: #BDBDBD
+
+  .inner-top
+    h1
+      color: #f5f5f5
+
+      @media (max-width: 767px)
+        margin-bottom: 27px

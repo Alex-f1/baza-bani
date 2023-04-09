@@ -104,20 +104,41 @@ if (document.querySelectorAll(".card-project-technology-choice").length) {
   technologyChoice();
 }
 
-const additionalOptionsInfoTable = document.querySelector(".card-project-additional-options__info-table");
-const additionalOptionsBottom = document.querySelector(".card-project-additional-options__bottom");
-const buttonMoreCollapse = document.querySelector(".js-button-more-collapse");
-console.log(additionalOptionsInfoTable.clientHeight);
+function additionalOptions() {
+  const additionalOptionsInfoTable = document.querySelector(".card-project-additional-options__info-table");
+  const additionalOptionsBottom = document.querySelector(".card-project-additional-options__bottom");
+  const buttonMoreCollapse = document.querySelector(".js-button-more-collapse");
 
-if (additionalOptionsInfoTable.clientHeight > 545) {
-  additionalOptionsInfoTable.style.height = 545 + "px";
-  additionalOptionsInfoTable.classList.add("_is-collapsed");
-  additionalOptionsBottom.classList.add("_is-show");
-  buttonMoreCollapse.addEventListener("click", function () {
-    additionalOptionsInfoTable.classList.remove("_is-collapsed");
-    additionalOptionsBottom.classList.remove("_is-show");
-    additionalOptionsInfoTable.style.height = "auto";
+  if (additionalOptionsInfoTable.clientHeight > 545) {
+    additionalOptionsInfoTable.style.height = 545 + "px";
+    additionalOptionsInfoTable.classList.add("_is-collapsed");
+    additionalOptionsBottom.classList.add("_is-show");
+    buttonMoreCollapse.addEventListener("click", function () {
+      additionalOptionsInfoTable.classList.remove("_is-collapsed");
+      additionalOptionsBottom.classList.remove("_is-show");
+      additionalOptionsInfoTable.style.height = "auto";
+    });
+  }
+}
+
+if (document.querySelectorAll(".ard-project-additional-options").length) {
+  additionalOptions();
+}
+
+function filterNavigationScrollbar() {
+  const filterNavigationScrollbar = new Swiper(".js-filter-navigation-scrollbar", {
+    direction: "horizontal",
+    slidesPerView: "auto",
+    freeMode: true,
+    scrollbar: {
+      el: ".js-filter-navigation-scrollbar .swiper-scrollbar",
+      draggable: true
+    }
   });
+}
+
+if (document.querySelectorAll(".js-filter-navigation-scrollbar").length) {
+  filterNavigationScrollbar();
 }
 
 function inputFile() {
