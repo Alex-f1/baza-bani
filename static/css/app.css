@@ -4482,6 +4482,19 @@ body {
 }
 .step-info {
   padding-bottom: 93px;
+  position: relative;
+}
+.step-info:after {
+  content: '';
+  position: absolute;
+  top: -317px;
+  right: 0;
+  width: 836px;
+  height: 100%;
+  background-image: url("../img/pic.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
 }
 .step-info__inner {
   max-width: 1210px;
@@ -5514,6 +5527,9 @@ body {
   }
   .step-info {
     padding-bottom: 63px;
+  }
+  .step-info:after {
+    display: none;
   }
   .step-info__container {
     padding-bottom: 0;
