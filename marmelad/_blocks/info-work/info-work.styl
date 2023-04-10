@@ -10,6 +10,16 @@
   @media (max-width: 767px)
     padding-top: 120px
 
+  &--self
+    padding-top: 10px !important
+    padding-bottom: 20px !important
+    background-color: transparent
+
+    & ^[0]
+      &__inner
+        &:after
+          display: none
+
   &__inner
     position: relative
 

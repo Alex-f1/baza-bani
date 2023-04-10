@@ -3163,6 +3163,14 @@ body {
   padding-bottom: 30px;
   background-color: #f5f5f5;
 }
+.info-work--self {
+  padding-top: 10px !important;
+  padding-bottom: 20px !important;
+  background-color: transparent;
+}
+.info-work--self .info-work__inner:after {
+  display: none;
+}
 .info-work__inner {
   position: relative;
 }
@@ -6118,7 +6126,7 @@ body {
     padding-top: 63px;
     padding-bottom: 50px;
     background-image: url("../img/form-feedback-light-bg-mobile.png");
-    background-position: 0 0;
+    background-position: 0 -70px;
   }
   .form-feedback__fields .input-field {
     width: 100%;

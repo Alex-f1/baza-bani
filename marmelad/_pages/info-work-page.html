@@ -1,0 +1,136 @@
+---
+# JS-YAML demo
+# https://nodeca.github.io/js-yaml/
+page:
+	title: Схема работы
+	layout:
+		header: true
+		footer: true
+		left: false
+		right: false
+path: [
+	{"title": Главная},
+	{"title": Клиентам},
+]    
+body:
+	classes:
+---
+
+{% extends 'app.html' %}
+
+{% block main %}
+
+
+
+
+  <div block="inner-top">
+    <div elem="section">
+      <div elem="inner" class="contain">
+        {% include "bread-crumbs.html" %}
+        <h1>Схема работы</h1>
+      </div>
+    </div>
+  </div><!-- inner-top -->
+
+  <section block="info-work" mods="self">
+    <div elem="section">
+      <div elem="inner" class="contain">
+        <div elem="items">
+          <div elem="item">
+            <div elem="body">
+              <div elem="step"><span>/ </span>1 шаг</div>
+              <div elem="desc">
+                Закажите обратный звонок, пишите нам в чат (WhatsApp/ Телеграм) или заполняете любую форму обратной связи
+                на сайте.
+              </div>
+            </div>
+          </div>
+          <div elem="item">
+            <div elem="body">
+              <div elem="step"><span>/ </span>2 шаг</div>
+              <div elem="desc">
+                Консультация и согласование всех деталей.
+              </div>
+            </div>
+          </div>
+          <div elem="item">
+            <div elem="body">
+              <div elem="step"><span>/ </span>3 шаг</div>
+              <div elem="desc">
+                Заключение договора дистанционно, либо лично.
+              </div>
+            </div>
+          </div>
+          <div elem="item">
+            <div elem="body">
+              <div elem="step"><span>/ </span>4 шаг</div>
+              <div elem="desc">
+                Доставка комплекта материала и заезд бригады строителей.
+              </div>
+            </div>
+          </div>
+          <div elem="item">
+            <div elem="body">
+              <div elem="step"><span>/ </span>5 шаг</div>
+              <div elem="desc">
+                Строительные и монтажные работы.
+              </div>
+            </div>
+          </div>
+          <div elem="item">
+            <div elem="body">
+              <div elem="step"><span>/ </span>6 шаг</div>
+              <div elem="desc">
+                Приемка объекта клиентом.
+              </div>
+            </div>
+          </div>
+          <div elem="item">
+            <div elem="body">
+              <div elem="step"><span>/ </span>7 шаг</div>
+              <div elem="desc">
+                Окончательный расчет.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- info-work -->
+
+  <div block="form-feedback" mods="light-bg">
+    <div elem="section">
+      <div elem="inner">
+        <form elem="form">
+          <div elem="container">
+            <div elem="inner">
+              <div elem="head">
+                <h2>Остались вопросы <br>
+                  или хотите обсудить детали?</h2>
+              </div>
+              <div elem="wrapper">
+                <div elem="fields">
+                  <div class="input-field">
+                    <input type="text" placeholder="Имя">
+                  </div>
+                  <div class="input-field">
+                    <input type="tel" class="phone-mask" placeholder="+7 (___) - ___-__-__">
+                  </div>
+                </div>
+                <div elem="buttons">
+                  <button elem="button-send" class="button-default" type="submit">
+                    <span>Отправить на БАZУ</span>
+                  </button>
+                  <div class="privacy-policy">
+                    <span>Согласен с <a href="#">политикой конфиденциальности</a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div><!-- form-feedback -->
+
+{% endblock %}
