@@ -3550,6 +3550,17 @@ body {
 .our-services .form-feedback--light .form-feedback__container {
   padding-bottom: 0;
 }
+.our-services--self {
+  padding-bottom: 18px;
+}
+.our-services--self .our-services__section {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  background: none !important;
+}
+.our-services--self .our-services__controls {
+  top: 190px;
+}
 .our-services__section {
   padding-top: 74px;
   padding-bottom: 30px;
@@ -5344,6 +5355,9 @@ body {
     padding-left: 30px;
     margin-left: 25px;
   }
+  .our-services--self .our-services__controls {
+    top: 60px;
+  }
   .our-services__controls {
     top: 160px;
     left: 550px;
@@ -5742,6 +5756,9 @@ body {
   }
   .our-advantages__content h3:before {
     display: none;
+  }
+  .our-services--self .our-services__controls {
+    top: 380px;
   }
   .our-services__section {
     padding-top: 41px;

@@ -3,6 +3,24 @@
     .form-feedback__container
       padding-bottom: 0
 
+  &--self
+    padding-bottom: 18px
+
+    & ^[0]
+      &__section
+        padding-top: 0 !important
+        padding-bottom: 0 !important
+        background: none !important
+
+      &__controls
+        top: 190px
+
+        @media (max-width: 1279px)
+          top: 60px
+
+        @media (max-width: 959px)
+          top: 380px
+
   &__section
     padding-top: 74px
     padding-bottom: 30px

@@ -1,0 +1,149 @@
+---
+# JS-YAML demo
+# https://nodeca.github.io/js-yaml/
+page:
+	title: Услуги
+	layout:
+		header: true
+		footer: true
+		left: false
+		right: false
+path: [
+	{"title": Главная},
+]    
+body:
+	classes:
+---
+
+{% extends 'app.html' %}
+
+{% block main %}
+
+
+
+<div class="main-bg main-bg--type2">
+
+  <div block="inner-top">
+    <div elem="section">
+      <div elem="inner" class="contain">
+        {% include "bread-crumbs.html" %}
+        <h1>Услуги</h1>
+      </div>
+    </div>
+  </div><!-- inner-top -->
+
+  <section block="our-services" mods="self">
+    <div elem="section">
+      <div elem="inner" class="contain">
+        <div elem="controls">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div elem="container" class="swiper js-our-services-slider">
+          <div elem="items" class="swiper-wrapper">
+            <div elem="item" class="swiper-slide">
+              <div elem="body">
+                <div elem="img"><img src="img/our-services-img.jpg" alt=""></div>
+                <div elem="content">
+                  <h3>Проектирование</h3>
+                  <div elem="desc">
+                    Разработка проекта, фасады, планировка,
+                    разделы АР и КР
+                  </div>
+                  <a elem="button-order-cost" class="button-default button-default--fill"
+                    data-popup-modal="#about_service" href="#">
+                    <span>Заказать услугу</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div elem="item" class="swiper-slide">
+              <div elem="body">
+                <div elem="img"><img src="img/our-advantages-img.jpg" alt=""></div>
+                <div elem="content">
+                  <h3>Продажа пиломатериалов</h3>
+                  <div elem="desc">
+                    Разработка проекта, фасады, планировка,
+                    разделы АР и КР
+                  </div>
+                  <a elem="button-order-cost" class="button-default button-default--fill" href="#">
+                    <span>Заказать расчет стоимости</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div elem="item" class="swiper-slide">
+              <div elem="body">
+                <div elem="img"><img src="img/our-services-img.jpg" alt=""></div>
+                <div elem="content">
+                  <h3>Фундаменты</h3>
+                  <div elem="desc">
+                    Разработка проекта, фасады, планировка,
+                    разделы АР и КР
+                  </div>
+                  <a elem="button-order-cost" class="button-default button-default--fill" href="#">
+                    <span>Заказать расчет стоимости</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div elem="item" class="swiper-slide">
+              <div elem="body">
+                <div elem="img"><img src="img/our-services-img.jpg" alt=""></div>
+                <div elem="content">
+                  <h3>Комплектовка
+                    домокомплектов и
+                    банекомплектов</h3>
+                  <div elem="desc">
+                    Разработка проекта, фасады, планировка,
+                    разделы АР и КР
+                  </div>
+                  <a elem="button-order-cost" class="button-default button-default--fill" href="#">
+                    <span>Заказать расчет стоимости</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div block="form-feedback" mods="light">
+        <div elem="section">
+          <div elem="inner">
+            <form elem="form">
+              <div elem="container">
+                <div elem="inner">
+                  <div elem="head">
+                    <h2>Остались вопросы <br>
+                      или хотите обсудить детали?</h2>
+                  </div>
+                  <div elem="wrapper">
+                    <div elem="fields">
+                      <div class="input-field">
+                        <input type="text" placeholder="Имя">
+                      </div>
+                      <div class="input-field">
+                        <input type="tel" class="phone-mask" placeholder="+7 (___) - ___-__-__">
+                      </div>
+                    </div>
+                    <div elem="buttons">
+                      <button elem="button-send" class="button-default" type="submit">
+                        <span>Отправить на БАZУ</span>
+                      </button>
+                      <div class="privacy-policy">
+                        <span>Согласен с <a href="#">политикой конфиденциальности</a></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div><!-- form-feedback -->
+    </div>
+  </section><!-- our-services -->
+</div>
+
+{% endblock %}
