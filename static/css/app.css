@@ -583,6 +583,11 @@ body {
   background-size: auto;
   position: relative;
 }
+.main-bg--type2 {
+  background-image: url("../img/bg2.png");
+  background-position: 50% 10%;
+  padding-bottom: 50px;
+}
 .main-bg .projects-block {
   padding-top: 79px;
   padding-bottom: 42px;
@@ -5892,6 +5897,10 @@ body {
   .main-bg {
     background: url("../img/bg-mobile.png") no-repeat 50% 0, url("../img/bg-mobile2.png") no-repeat 50% 100%;
     background-size: 100% 50%;
+  }
+  .main-bg--type2 {
+    background: none;
+    padding-bottom: 15px;
   }
   .main-bg .projects-block {
     padding-top: 34px;
