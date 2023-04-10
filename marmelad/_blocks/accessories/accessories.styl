@@ -1,32 +1,26 @@
-.other-projects
-  padding-top: 25px
-  padding-bottom: 25px
+.accessories
+  padding-bottom: 30px
+  background: url('../img/bg.png') 0 0 no-repeat, url('../img/bg3.png') 0 116% no-repeat
+
+  @media (max-width: 767px)
+    background: url('../img/bg.png') 98% 30% no-repeat
+
+  .form-feedback
+    margin-top: 65px
+
+    @media (max-width: 767px)
+      margin-top: 50px
+
+.accessories-block
+  padding-top: 30px
+  padding-bottom: 30px
+
+  @media (max-width: 767px)
+    padding-top: 21px
+    padding-bottom: 21px
 
   &:last-child
     padding-bottom: 58px
-
-    @media (max-width: 767px)
-      padding-bottom: 44px
-
-  @media (max-width: 767px)
-    padding-bottom: 15px
-
-  h2
-    font-size: 40px
-    color: #0C0C0C
-    font-family: $fonts.headings
-    font-weight: 700
-    line-height: 1.2
-    text-align: center
-    margin-top: 0
-    margin-bottom: 45px
-
-    @media (max-width: 767px)
-      font-size: 30px
-      margin-bottom: 30px
-
-    @media (max-width: 639px)
-      text-align: left
 
   h3
     font-size: 36px
@@ -48,8 +42,17 @@
     max-width: 1245px
     overflow: hidden
 
+  &__container:not(.swiper-initialized)
+    display: flex
+    flex-wrap: nowrap
+    overflow: hidden
+
+    & ^[0]
+      &__item
+        margin-right: 30px
+        flex: 0 0 33.333%
+
   &__container
-    // overflow: visible
     @media (min-width: 1280px)
       padding-right: 20px
       padding-left: 20px
@@ -107,7 +110,77 @@
       @media (max-width: 767px)
         right: -8px
 
-  &__bottom
-    padding-top: 29px
+.accessory-thumb
+  display: block
+
+  &__body
     display: flex
-    justify-content: center
+    flex-direction: column
+    position: relative
+    overflow: hidden
+    border-radius: 10px
+
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 33.31%, #000000 111.39%)
+      z-index: 2
+
+  &__img
+    overflow: hidden
+    position: relative
+    z-index: 1
+
+    &:before
+      content: ''
+      display: block
+      padding-top: 103.7%
+
+    img
+      vertical-align: top
+      width: 100%
+      height: 100%
+      object-fit: cover
+      position: absolute
+      top: 0
+      left: 0
+
+  &__content
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    z-index: 3
+    padding: 52px 20px
+
+    @media (max-width: 767px)
+      padding-top: 47px
+      padding-bottom: 47px
+
+  &__name
+    font-size: 28px
+    color: #F5F5F5
+    font-weight: 400
+    line-height: 1
+    margin-bottom: 17px
+
+    @media (max-width: 767px)
+      font-size: 25px
+      margin-bottom: 15px
+
+  &__price
+    font-size: 18px
+    color: #F5F5F5
+    font-weight: 400
+    line-height: 1
+
+    @media (max-width: 767px)
+      font-size: 16px

@@ -1,0 +1,51 @@
+---
+# JS-YAML demo
+# https://nodeca.github.io/js-yaml/
+page:
+	title: Аксессуары для бань
+	layout:
+		header: true
+		footer: true
+		left: false
+		right: false
+path: [
+	{"title": Главная},
+]    
+body:
+	classes:
+---
+
+{% extends 'app.html' %}
+
+{% block main %}
+
+  {#
+  <div block="inner-top">
+    <div elem="section">
+      <div elem="inner" class="contain">
+        {% include "bread-crumbs.html" %}
+        <h1>Акции</h1>
+      </div>
+    </div>
+  </div><!-- inner-top -->
+  #}
+
+  <div block="first-screen-inner">
+    <div elem="section">
+      <div elem="inner">
+        <div block="inner-top">
+          <div elem="section">
+            <div elem="inner" class="contain">
+              {% include "bread-crumbs.html" %}
+              <h1>Серии и проекты бань</h1>
+              <p>Аксессуары продаются только при заказе строительства бани!</p>
+            </div>
+          </div>
+        </div><!-- inner-top -->
+      </div>
+    </div>
+  </div><!-- first-screen-inner -->
+
+  {% include "accessories.html" %}
+
+{% endblock %}
