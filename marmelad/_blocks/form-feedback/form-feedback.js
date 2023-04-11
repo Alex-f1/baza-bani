@@ -56,3 +56,6 @@ if (document.querySelectorAll('.input-file').length) {
 if (document.querySelectorAll('.js-choice').length) {
   customSelect();
 }
+if (document.querySelectorAll('.phone-mask').length) {
+  phoneMask();
+}

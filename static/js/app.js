@@ -226,6 +226,10 @@ if (document.querySelectorAll('.js-choice').length) {
   customSelect();
 }
 
+if (document.querySelectorAll('.phone-mask').length) {
+  phoneMask();
+}
+
 function heroSliderInit() {
   const item = document.querySelectorAll(".hero__item");
   const numberZero = item.length + 1 <= 10 ? "0" : "";
