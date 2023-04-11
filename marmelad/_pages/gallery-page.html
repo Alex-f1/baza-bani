@@ -1,0 +1,219 @@
+---
+# JS-YAML demo
+# https://nodeca.github.io/js-yaml/
+page:
+	title: Галерея
+	layout:
+		header: true
+		footer: true
+		left: false
+		right: false
+path: [
+	{"title": Главная},
+]    
+body:
+	classes:
+---
+
+{% extends 'app.html' %}
+
+{% block main %}
+
+  
+
+  <section block="gallery-block" mods="self">
+    <div elem="section">
+      <div block="inner-top">
+        <div elem="section">
+          <div elem="inner" class="contain">
+            {% include "bread-crumbs.html" %}
+            <h1>Галерея</h1>
+          </div>
+        </div>
+      </div><!-- inner-top -->
+      <div elem="inner" class="contain">
+        <div elem="head">
+          <h2>Видео</h2>
+        </div>
+        <div elem="video-items">
+          <div elem="video-item">
+            <div elem="video-thumb">
+              <div elem="poster"><img src="img/gallery-block-poster-img.jpg" alt=""></div>
+              <button elem="button-play" class="js-button-play"
+                data-video-src="https://www.youtube.com/embed/nKnRm8_wlsQ?autoplay=1" data-popup-modal="#video"
+                type="button"></button>
+            </div>
+          </div>
+          <div elem="video-item">
+            <div elem="video-thumb">
+              <div elem="poster"><img src="img/gallery-block-poster-img2.jpg" alt=""></div>
+              <button elem="button-play" class="js-button-play"
+                data-video-src="https://www.youtube.com/embed/nKnRm8_wlsQ?autoplay=1" data-popup-modal="#video"
+                type="button"></button>
+            </div>
+          </div>
+          <div elem="video-item">
+            <div elem="video-thumb">
+              <div elem="poster"><img src="img/gallery-block-poster-img3.jpg" alt=""></div>
+              <button elem="button-play" class="js-button-play"
+                data-video-src="https://www.youtube.com/embed/nKnRm8_wlsQ?autoplay=1" data-popup-modal="#video"
+                type="button"></button>
+            </div>
+          </div>
+          <div elem="video-item">
+            <div elem="video-thumb">
+              <div elem="poster"><img src="img/gallery-block-poster-img4.jpg" alt=""></div>
+              <button elem="button-play" class="js-button-play"
+                data-video-src="https://www.youtube.com/embed/nKnRm8_wlsQ?autoplay=1" data-popup-modal="#video"
+                type="button"></button>
+            </div>
+          </div>
+          <div elem="video-item">
+            <div elem="video-thumb">
+              <div elem="poster"><img src="img/gallery-block-poster-img5.jpg" alt=""></div>
+              <button elem="button-play" class="js-button-play"
+                data-video-src="https://www.youtube.com/embed/nKnRm8_wlsQ?autoplay=1" data-popup-modal="#video"
+                type="button"></button>
+            </div>
+          </div>
+        </div>
+        <div elem="buttons">
+          <a elem="button-all" mods="chanel" class="button-default button-default--outline" href="#">
+            <span>Смотреть все видео</span>
+          </a>
+        </div>
+        <div elem="head">
+          <h2>Фото</h2>
+        </div>
+        <div elem="navigation">
+          <button elem="button-nav" class="button-default button-default--outline _is-active js-button-gallery-photos">
+            <span>Фотоотчеты</span>
+          </button>
+          <button elem="button-nav" class="button-default js-button-gallery-photos">
+            <span>Детали</span>
+          </button>
+        </div>
+        <div elem="photos">
+          <div elem="photo-reports" class="_is-show js-gallery-photos">
+            <div elem="photo-items">
+              <div elem="photo-item">
+                <div elem="photo-thumb">
+                  <div elem="img"><img src="img/gallery-block-photo-img.jpg" alt=""></div>
+                  <div elem="content">
+                    <div elem="data">14.02.2023</div>
+                    <div elem="desc">
+                      Двухэтажная баня 14х9 м
+                      в Ленинградской области
+                    </div>
+                    <a elem="link-go" href="#"><span>Смотреть фотоотчет</span></a>
+                  </div>
+                </div>
+              </div>
+              <div elem="photo-item">
+                <div elem="photo-thumb">
+                  <div elem="img"><img src="img/gallery-block-photo-img.jpg" alt=""></div>
+                  <div elem="content">
+                    <div elem="data">14.02.2023</div>
+                    <div elem="desc">
+                      Двухэтажная баня 14х9 м
+                      в Ленинградской области
+                    </div>
+                    <a elem="link-go" href="#"><span>Смотреть фотоотчет</span></a>
+                  </div>
+                </div>
+              </div>
+              <div elem="photo-item">
+                <div elem="photo-thumb">
+                  <div elem="img"><img src="img/gallery-block-photo-img.jpg" alt=""></div>
+                  <div elem="content">
+                    <div elem="data">14.02.2023</div>
+                    <div elem="desc">
+                      Двухэтажная баня 14х9 м
+                      в Ленинградской области
+                    </div>
+                    <a elem="link-go" href="#"><span>Смотреть фотоотчет</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div elem="buttons">
+              <a elem="button-go" class="button-default button-default--outline" href="#">
+                <span>Перейти в галерею видео</span>
+              </a>
+            </div>
+          </div>
+          <div elem="details-photo" class="js-gallery-photos">
+            <div elem="detail-items" class="spotlight-group">
+              <div elem="detail-item">
+                <a elem="detail-img" class="spotlight" href="img/gallery-block-photo-img.jpg">
+                  <img src="img/gallery-block-detail-item-img.jpg" alt="">
+                </a>
+              </div>
+              <div elem="detail-item">
+                <a elem="detail-img" class="spotlight" href="img/gallery-block-photo-img.jpg">
+                  <img src="img/gallery-block-detail-item-img.jpg" alt="">
+                </a>
+              </div>
+              <div elem="detail-item">
+                <a elem="detail-img" class="spotlight" href="img/gallery-block-photo-img.jpg">
+                  <img src="img/gallery-block-detail-item-img.jpg" alt="">
+                </a>
+              </div>
+              <div elem="detail-item">
+                <a elem="detail-img" class="spotlight" href="img/gallery-block-photo-img.jpg">
+                  <img src="img/gallery-block-detail-item-img.jpg" alt="">
+                </a>
+              </div>
+              <div elem="detail-item">
+                <a elem="detail-img" class="spotlight" href="img/gallery-block-photo-img.jpg">
+                  <img src="img/gallery-block-detail-item-img.jpg" alt="">
+                </a>
+              </div>
+              <div elem="detail-item">
+                <a elem="detail-img" class="spotlight" href="img/gallery-block-photo-img.jpg">
+                  <img src="img/gallery-block-detail-item-img.jpg" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div block="form-feedback" mods="dark">
+        <div elem="section">
+          <div elem="inner">
+            <form elem="form">
+              <div elem="container">
+                <div elem="inner">
+                  <div elem="head">
+                    <h2>Остались вопросы <br>
+                      или хотите обсудить детали?</h2>
+                  </div>
+                  <div elem="wrapper">
+                    <div elem="fields">
+                      <div class="input-field">
+                        <input type="text" placeholder="Имя">
+                      </div>
+                      <div class="input-field">
+                        <input type="tel" class="phone-mask" placeholder="+7 (___) - ___-__-__">
+                      </div>
+                    </div>
+                    <div elem="buttons">
+                      <button elem="button-send" class="button-default" type="submit">
+                        <span>Отправить на БАZУ</span>
+                      </button>
+                      <div class="privacy-policy">
+                        <span>Согласен с <a href="#">политикой конфиденциальности</a></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div><!-- form-feedback -->
+    </div>
+  </section><!-- gallery-block -->
+
+
+{% endblock %}
