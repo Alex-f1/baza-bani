@@ -414,10 +414,13 @@ const navigationScrollbar = new Swiper(".js-navigation-scrollbar", {
 });
 
 function reviewsBlockSliderInit() {
+  const reviewsBlock = document.querySelector(".reviews-block");
+  const hasSingle = reviewsBlock.classList.contains("reviews-block--single") ? false : true;
   const reviewBlockSlider = new Swiper(".js-reviews-block-slider", {
     slidesPerView: 1,
     spaceBetween: 50,
     allowTouchMove: false,
+    autoHeight: hasSingle,
     loop: true,
     pagination: {
       el: ".main-swiper-pagination",
@@ -443,6 +446,8 @@ function reviewsBlockSliderInit() {
   const reviewThumbNestedSlider = new Swiper(".js-review-thumb-nested-slider", {
     slidesPerView: 4,
     spaceBetween: 14,
+    watchOverflow: true,
+    nested: true,
     pagination: {
       el: ".review-thumb__pics .swiper-pagination",
       clickable: true
