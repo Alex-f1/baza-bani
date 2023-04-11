@@ -1,0 +1,38 @@
+---
+# JS-YAML demo
+# https://nodeca.github.io/js-yaml/
+page:
+	title: Часто задаваемые вопросы
+	layout:
+		header: true
+		footer: true
+		left: false
+		right: false
+path: [
+	{"title": Главная},
+	{"title": Клиентам},
+]    
+body:
+	classes:
+---
+
+{% extends 'app.html' %}
+
+{% block main %}
+
+  <div style="background-color: #F5F5F5;">
+    <div block="inner-top">
+      <div elem="section">
+        <div elem="inner" class="contain">
+          {% include "bread-crumbs.html" %}
+          <h1>Часто задаваемые вопросы</h1>
+        </div>
+      </div>
+    </div><!-- inner-top -->
+  
+    {% include "faq-block.html" %}
+  </div>
+
+  {% include "faq-form.html" %}
+
+{% endblock %}

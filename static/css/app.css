@@ -2017,6 +2017,130 @@ body {
 .catalog-thumb__info span:last-child {
   margin-right: 0;
 }
+.faq-block {
+  padding-bottom: 123px;
+}
+.faq-block__item {
+  padding-bottom: 38px;
+}
+.faq-block__item:last-child {
+  margin-bottom: 0;
+}
+.faq-block__body {
+  display: flex;
+}
+.faq-block__question,
+.faq-block__answer {
+  padding-top: 35px;
+  border-top: 1px solid #bdbdbd;
+}
+.faq-block__question {
+  flex: 0 0 370px;
+  width: 370px;
+  max-width: 370px;
+  margin-right: 130px;
+  padding-bottom: 38px;
+}
+.faq-block__question h5 {
+  font-size: 18px;
+  color: #0c0c0c;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.faq-block__answer {
+  flex: 1 1 auto;
+  overflow: hidden;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+.faq-block__answer._is-collapsed {
+  cursor: pointer;
+}
+.faq-block__answer._is-collapsed:after {
+  display: block;
+}
+.faq-block__answer:after {
+  content: '';
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  background: linear-gradient(180deg, rgba(245,245,245,0) -13.64%, #f5f5f5 40.91%);
+  display: none;
+}
+.faq-block__answer p {
+  font-size: 18px;
+  color: #4b4a4a;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-top: 0;
+  margin-bottom: 15px;
+  display: none;
+}
+.faq-block__answer p:last-child {
+  margin-bottom: 0;
+}
+.faq-form {
+  padding-top: 146px;
+  padding-bottom: 120px;
+  background-color: #0c0c0c;
+  background-image: url("../img/faq-form-bg.png");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+.faq-form__inner {
+  max-width: 810px;
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.faq-form__head {
+  margin-bottom: 36px;
+}
+.faq-form__head h2 {
+  font-size: 40px;
+  color: #f5f5f5;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.faq-form__head p {
+  font-size: 18px;
+  color: #bdbdbd;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 600px;
+  width: 100%;
+}
+.faq-form__fields {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+}
+.faq-form__fields .input-field {
+  width: 50%;
+  padding-left: 30px;
+}
+.faq-form__fields .input-field:last-child {
+  width: 100%;
+}
+.faq-form__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.faq-form__button-send {
+  margin-top: 20px;
+}
 .filter--single .filter__container {
   align-items: center;
 }
@@ -5265,6 +5389,12 @@ body {
   .catalog-thumb__body {
     margin-bottom: 24px;
   }
+  .faq-block__question {
+    flex: 0 0 330px;
+    width: 330px;
+    max-width: 330px;
+    margin-right: 60px;
+  }
   .filter--single .filter__options {
     margin-right: 50px;
   }
@@ -6103,6 +6233,49 @@ body {
     font-size: 30px;
     margin-bottom: 36px;
   }
+  .faq-block {
+    padding-bottom: 54px;
+  }
+  .faq-block__item {
+    padding-bottom: 10px;
+  }
+  .faq-block__item:last-child {
+    border-bottom: 1px solid #bdbdbd;
+  }
+  .faq-block__body {
+    display: block;
+  }
+  .faq-block__question {
+    width: 100%;
+    max-width: 100%;
+    padding-top: 20px;
+    padding-bottom: 15px;
+  }
+  .faq-block__question h5 {
+    font-size: 20px;
+  }
+  .faq-block__answer {
+    border-top: none;
+    padding-top: 0;
+  }
+  .faq-block__answer:after {
+    bottom: -15px;
+  }
+  .faq-block__answer p {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  .faq-form {
+    padding-top: 45px;
+    padding-bottom: 50px;
+    background-image: none;
+  }
+  .faq-form__head h2 {
+    font-size: 28px;
+  }
+  .faq-form__head p {
+    line-height: 1.3;
+  }
   .filter--single .filter__options {
     margin-right: 0;
   }
@@ -6635,6 +6808,9 @@ body {
   }
   .card-project-note__buttons a {
     font-size: 16px;
+  }
+  .faq-form__fields .input-field {
+    width: 100%;
   }
   .form-feedback:before {
     display: none;
