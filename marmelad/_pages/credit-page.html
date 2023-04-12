@@ -1,0 +1,33 @@
+---
+# JS-YAML demo
+# https://nodeca.github.io/js-yaml/
+page:
+	title: Кредит и мат. капитал
+	layout:
+		header: true
+		footer: true
+		left: false
+		right: false
+path: [
+	{"title": Главная},
+]    
+body:
+	classes:
+---
+
+{% extends 'app.html' %}
+
+{% block main %}
+
+  <div block="inner-top">
+    <div elem="section">
+      <div elem="inner" class="contain">
+        {% include "bread-crumbs.html" %}
+        <h1>Кредит и мат. капитал</h1>
+      </div>
+    </div>
+  </div><!-- inner-top -->
+
+  {% include "credit-block.html" %}
+
+{% endblock %}

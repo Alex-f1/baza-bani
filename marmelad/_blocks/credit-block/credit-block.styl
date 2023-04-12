@@ -1,0 +1,243 @@
+.credit-block
+  padding-bottom: 100px
+
+  &__navigation
+    padding-bottom: 20px
+    margin-bottom: 2px
+
+    .swiper-scrollbar-horizontal
+      height: 8px
+      background-color: #E4E4E4
+      border-radius: 50px
+      overflow: hidden
+      bottom: 0
+
+      &:after
+        content: ''
+        position: absolute
+        top: 0
+        right: 0
+        width: 5px
+        height: 100%
+        border-radius: 50px
+        background-color: #E4E4E4
+        z-index: 2
+
+      .swiper-scrollbar-drag
+        top: 2.2px
+        height: 4px
+        background-color: #3AA531
+        border-radius: 50px
+        margin-left: 5px
+        margin-right: 5px
+        z-index: 1
+
+  &__items
+    display: flex
+    margin-left: -7px
+
+    &.swiper-slide
+      display: flex
+      width: auto
+      margin-right: auto
+
+  &__item
+    flex: 0 0 auto
+    padding-left: 7px
+    cursor: pointer
+
+    &._is-active
+      pointer-events: none
+
+      & ^[0]
+        &__body
+          background-color: #0C0C0C
+
+          &:after
+            opacity: 1
+            visibility: visible
+
+        &__name
+          color: #F5F5F5
+
+        &__note
+          color: #3AA531
+          padding-left: 14px
+          display: none
+
+          &--active
+            display: block
+
+          &:before
+            display: block
+
+  &__body
+    width: 287px
+    min-height: 96px
+    background-color: #F5F5F5
+    padding: 25px 20px
+    position: relative
+    transform: background-color 0.3s
+
+    @media (max-width: 767px)
+      width: 260px
+      padding-top: 15px
+      padding-bottom: 15px
+      min-height: 79px
+      padding-right: 10px
+
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      width: 10px
+      height: 100%
+      background-color: #3AA531
+      opacity: 0
+      visibility: hidden
+      transition: opacity 0.3s
+
+  &__name
+    font-size: 22px
+    color: #0C0C0C
+    font-weight: 600
+    line-height: 1.1
+    margin-bottom: 5px
+    transition: color 0.3s
+
+    @media (max-width: 767px)
+      font-size: 18px
+      font-weight: 400
+
+  &__note
+    font-size: 16px
+    color: #4B4A4A
+    font-weight: 400
+    line-height: 1.1
+    position: relative
+
+    &--active
+      display: none
+
+    &:before
+      content: ''
+      width: 7px
+      height: 7px
+      border-radius: 50%
+      position: absolute
+      top: 7px
+      left: 0
+      background-color: #3AA531
+      display: none
+
+      @media (max-width: 639px)
+        top: 6px
+
+  &__info
+    padding-top: 20px
+    display: none
+    animation: fadeOut 0.3s ease-in
+
+    &._is-show
+      display: block
+      animation: fadeIn 0.3s ease-in
+
+  &__links
+    display: flex
+    padding-bottom: 20px
+
+  &__link
+    font-size: 22px
+    color: #4B4A4A
+    font-weight: 450
+    line-height: 1.1
+    text-decoration: none
+    padding-bottom: 4px
+    margin-right: 50px
+    border-bottom: 2px solid transparent
+    transition: color 0.3s, border-color 0.3s
+
+    @media (max-width: 767px)
+      font-size: 18px
+      font-weight: 400
+      margin-right: 30px
+
+    @media (max-width: 374px)
+      margin-right: 15px
+
+    &:last-child
+      margin-right: 0
+
+    &._is-active
+      pointer-events: none
+      color: #3aa531
+      border-color: #3aa531
+
+    &:hover
+      color: #3aa531
+      border-color: #3aa531
+
+  &__content
+    padding-top: 20px
+
+  &__table-info
+    margin-bottom: 50px
+
+    table
+      width: 100%
+      border-collapse: collapse
+
+      tr
+        td
+          font-size: 22px
+          color: #0C0C0C
+          font-weight: 400
+          line-height: 1.1
+          width: 40%
+          border-bottom: 1px solid #BDBDBD
+          padding: 6px 0
+
+          @media (max-width: 1023px)
+            font-size: 16px
+
+          &:last-child
+            width: 60px
+            text-align: right
+
+  &__text
+    margin-bottom: 25px
+
+    h3
+      font-size: 28px
+      color: #0C0C0C
+      font-family: $fonts.headings
+      font-weight: 700
+      line-height: 1.3
+      margin-bottom: 10px
+
+      @media (max-width: 767px)
+        font-size: 22px
+
+    p
+      font-size: 22px
+      color: #0C0C0C
+      font-weight: 400
+      line-height: 1.2
+      margin-top: 0
+      margin-bottom: 5px
+
+      @media (max-width: 767px)
+        font-size: 16px
+
+  &__buttons
+    padding-top: 20px
+    display: flex
+    flex-wrap: wrap
+
+  &__button-file
+    margin-right: 16px
+    margin-bottom: 10px
+
+    &:last-child
+      margin-right: 0
