@@ -1,0 +1,42 @@
+---
+# JS-YAML demo
+# https://nodeca.github.io/js-yaml/
+page:
+	title: Контакты
+	layout:
+		header: true
+		footer: true
+		left: false
+		right: false
+path: [
+	{"title": Главная},
+]    
+body:
+	classes:
+---
+
+{% extends 'app.html' %}
+
+{% block main %}
+
+  <div block="first-screen-inner">
+    <div elem="section">
+      <div elem="inner">
+        <div block="inner-top">
+          <div elem="section">
+            <div elem="inner" class="contain">
+              {% include "bread-crumbs.html" %}
+              <h1>Контакты</h1>
+            </div>
+          </div>
+        </div><!-- inner-top -->
+      </div>
+    </div>
+  </div><!-- first-screen-inner -->
+
+  <div class="main-bg main-bg--type2 main-bg--contacts">
+    {% include "contacts-block.html" %}
+  </div>
+
+
+{% endblock %}
