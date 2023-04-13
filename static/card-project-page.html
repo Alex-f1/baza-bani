@@ -724,10 +724,10 @@
               <p>Проект можно изменить по вашим требованиям и желаниям.</p>
             </div>
             <div class="card-project-note__buttons">
-              <a class="card-project-note__button-calculation button-default" href="#">
+              <a class="card-project-note__button-calculation button-default" data-popup-modal="#about_service" href="#">
                 <span>Расчет индивидуального проекта</span>
               </a>
-              <a class="card-project-note__button-change button-default button-default--outline" href="#">
+              <a class="card-project-note__button-change button-default button-default--outline" data-popup-modal="#change_project" href="#">
                 <span>Хочу внести изменения в проект</span>
               </a>
             </div>
@@ -891,6 +891,126 @@
       </div>
     </div>
   </div><!-- form-feedback -->
+
+  <div class="pop-up hystmodal" id="change_project" aria-hidden="true">
+    <div class="pop-up__section hystmodal__wrap">
+      <div class="pop-up__inner hystmodal__window" role="dialog" aria-modal="true">
+        <button data-hystclose="" class="hystmodal__close"></button>
+        <div class="pop-up__container">
+          <h3>Внести изменения в проект</h3>
+          <div class="form-feedback form-feedback--dark">
+            <div class="form-feedback__section">
+              <div class="form-feedback__inner">
+                <form class="form-feedback__form">
+                  <div class="form-feedback__container">
+                    <div class="form-feedback__inner">
+                      <div class="form-feedback__wrapper">
+                        <div class="form-feedback__options">
+                          <div class="form-feedback__option">
+                            <label class="label-control">
+                              <input type="checkbox" checked="">
+                              <span class="label-control__checkbox">
+                                <i></i>
+                                <span>Увеличить площадь</span>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="form-feedback__option">
+                            <label class="label-control">
+                              <input type="checkbox" checked="">
+                              <span class="label-control__checkbox">
+                                <i></i>
+                                <span>Увеличить или изменить окна</span>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="form-feedback__option">
+                            <label class="label-control">
+                              <input type="checkbox" checked="">
+                              <span class="label-control__checkbox">
+                                <i></i>
+                                <span>Сделать перепланировку</span>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="form-feedback__option">
+                            <label class="label-control">
+                              <input type="checkbox" checked="">
+                              <span class="label-control__checkbox">
+                                <i></i>
+                                <span>Изменить материал отделки</span>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="form-feedback__option">
+                            <label class="label-control">
+                              <input type="checkbox" checked="">
+                              <span class="label-control__checkbox">
+                                <i></i>
+                                <span>Изменить толщину крыши</span>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="form-feedback__option">
+                            <label class="label-control">
+                              <input type="checkbox">
+                              <span class="label-control__checkbox">
+                                <i></i>
+                                <span>Добавить/убрать веранду, крыльцо и др.</span>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="form-feedback__option">
+                            <label class="label-control">
+                              <input type="checkbox">
+                              <span class="label-control__checkbox">
+                                <i></i>
+                                <span>Изменить высоту потолков</span>
+                              </span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form-feedback__fields">
+                          <div class="input-field">
+                            <input type="text" placeholder="Имя">
+                          </div>
+                          <div class="input-field">
+                            <input type="tel" class="phone-mask" placeholder="+7 (___) - ___-__-__">
+                          </div>
+                        </div>
+                        <div class="form-feedback__buttons">
+                          <button class="form-feedback__button-send button-default" type="submit">
+                            <span>Отправить на БАZУ</span>
+                          </button>
+                          <div class="privacy-policy">
+                            <span>Согласен с <a href="#">политикой конфиденциальности</a></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div><!-- form-feedback -->
+        </div>
+        <!-- 
+          для отображения сообщения об успешной отправке формы добавляется
+            класс "_is-success" к родительскому классу "pop-up"
+        -->
+        <div class="pop-up__success">
+          <i class="pop-up__success-icon">
+            <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="31" cy="31" r="31" fill="#3AA531"></circle>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M29.0966 38.0263L21.9632 30.6603C21.5141 30.1966 20.7859 30.1966 20.3368 30.6603C19.8877 31.1241 19.8877 31.876 20.3368 32.3397L28.3868 40.6522C28.8743 41.1556 29.6783 41.106 30.1042 40.5461L42.7542 23.9212C43.1466 23.4055 43.0599 22.659 42.5604 22.2538C42.061 21.8486 41.3381 21.9382 40.9457 22.4539L29.0966 38.0263Z" fill="white" stroke="white"></path>
+            </svg>
+          </i>
+          <h3>Ваша заявка отправлена!</h3>
+          <p>Ожидайте звонок менеджера</p>
+        </div>
+      </div>
+    </div>
+  </div><!-- pop-up -->
 
 
 			</main><!-- app:main -->
@@ -1117,6 +1237,20 @@
             </div>
           </div>
         </div><!-- form-feedback -->
+      </div>
+      <!-- 
+        для отображения сообщения об успешной отправке формы добавляется
+          класс "_is-success" к родительскому классу "pop-up"
+      -->
+      <div class="pop-up__success">
+        <i class="pop-up__success-icon">
+          <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="31" cy="31" r="31" fill="#3AA531"></circle>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M29.0966 38.0263L21.9632 30.6603C21.5141 30.1966 20.7859 30.1966 20.3368 30.6603C19.8877 31.1241 19.8877 31.876 20.3368 32.3397L28.3868 40.6522C28.8743 41.1556 29.6783 41.106 30.1042 40.5461L42.7542 23.9212C43.1466 23.4055 43.0599 22.659 42.5604 22.2538C42.061 21.8486 41.3381 21.9382 40.9457 22.4539L29.0966 38.0263Z" fill="white" stroke="white"></path>
+          </svg>
+        </i>
+        <h3>Ваша заявка отправлена!</h3>
+        <p>Ожидайте звонок менеджера</p>
       </div>
     </div>
   </div>

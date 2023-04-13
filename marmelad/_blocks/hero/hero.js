@@ -39,16 +39,7 @@ function heroSliderInit() {
       .innerHTML = numberZero + item.length;
   
   });
-  /* console.log(index)
-  heroSlider.on('slidePrevTransitionStart', function () {
-    index = index -1;
-    
-    document.querySelector(".hero__fraction-current")
-      .innerHTML = numberZero + index;
-    document.querySelector(".hero__fraction-total")
-      .innerHTML = numberZero + item.length;
-  
-  }); */
+
 }
 
 

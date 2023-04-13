@@ -9,16 +9,6 @@ function creditChoiceBlock() {
       console.log(creditChoice[i])
       for (let b = 0; b < creditChoiceChildren.length; b++) {
 
-        // const choiceNote = creditChoiceChildren[b].querySelector(".credit-block__note");
-        // const getNoteActive = creditChoiceChildren[b].getAttribute("data-note-active");
-        // const getNote = creditChoiceChildren[b].getAttribute("data-note");
-        // console.log(choiceNote.innerText)
-        
-        // if (!creditChoiceChildren[b].classList.contains("_is-active")) {
-        //   choiceNote.innerText = getNoteActive;
-        // } else {
-        //   choiceNote.innerText = getNote;
-        // }
         creditChoiceChildren[b].classList.remove("_is-active");
       
       }

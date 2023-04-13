@@ -6,6 +6,14 @@
     .hystmodal__window
       width: 1280px
 
+  &._is-success
+    & ^[0]
+      &__container
+        display: none
+
+      &__success
+        display: flex
+
   .form-feedback
     &.form-feedback--dark
       .form-feedback__container
@@ -21,6 +29,7 @@
 
       .form-feedback__fields
         width: auto
+        align-self: stretch
 
       .form-feedback__buttons
         display: flex
@@ -51,6 +60,7 @@
 
     @media (max-width: 767px)
       height: 360px
+
     @media (max-width: 479px)
       height: 300px
 
@@ -58,6 +68,40 @@
       width: 100%
       height: 100%
       object-fit: cover
+
+  &__success
+    text-align: center
+    padding-top: 70px
+    padding-bottom: 70px
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    display: none
+
+    i
+      margin-bottom: 30px
+      width: 62px
+      max-width: 62px
+      height: 62px
+
+    h3
+      margin-top: 0 !important
+      line-height: 1.1
+      margin-bottom: 10px !important
+
+      @media (max-width: 767px)
+        font-size: 22px
+
+    p
+      font-size: 20px
+      color: #F5F5F5
+      font-weight: 450
+      line-height: 1.2
+      margin-top: 0
+      margin-bottom: 0
+
+      @media (max-width: 767px)
+        font-size: 16px
 
 .hystmodal__wrap
   padding-right: 20px

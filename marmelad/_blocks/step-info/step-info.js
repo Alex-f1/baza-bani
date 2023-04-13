@@ -7,7 +7,6 @@ function stepInfoSliderInit() {
     effect: "slide",
     speed: 800,
     spaceBetween: 20,
-    // rewind: true,
     autoHeight: true,
     pagination: {
       el: ".swiper-pagination",
@@ -38,16 +37,6 @@ function stepInfoSliderInit() {
       .innerHTML = numberZero + item.length;
 
   });
-  /* console.log(index)
-  stepInfoSlider.on('slidePrevTransitionStart', function () {
-    index = index -1;
-    
-    document.querySelector(".step-info__fraction-current")
-      .innerHTML = numberZero + index;
-    document.querySelector(".step-info__fraction-total")
-      .innerHTML = numberZero + item.length;
-  
-  }); */
 }
 
 

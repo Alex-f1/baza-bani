@@ -190,15 +190,6 @@ function creditChoiceBlock() {
       console.log(creditChoice[i]);
 
       for (let b = 0; b < creditChoiceChildren.length; b++) {
-        // const choiceNote = creditChoiceChildren[b].querySelector(".credit-block__note");
-        // const getNoteActive = creditChoiceChildren[b].getAttribute("data-note-active");
-        // const getNote = creditChoiceChildren[b].getAttribute("data-note");
-        // console.log(choiceNote.innerText)
-        // if (!creditChoiceChildren[b].classList.contains("_is-active")) {
-        //   choiceNote.innerText = getNoteActive;
-        // } else {
-        //   choiceNote.innerText = getNote;
-        // }
         creditChoiceChildren[b].classList.remove("_is-active");
       }
 
@@ -397,16 +388,6 @@ function heroSliderInit() {
     document.querySelector(".hero__fraction-current").innerHTML = numberZero + index;
     document.querySelector(".hero__fraction-total").innerHTML = numberZero + item.length;
   });
-  /* console.log(index)
-    heroSlider.on('slidePrevTransitionStart', function () {
-      index = index -1;
-      
-      document.querySelector(".hero__fraction-current")
-        .innerHTML = numberZero + index;
-      document.querySelector(".hero__fraction-total")
-        .innerHTML = numberZero + item.length;
-    
-    }); */
 }
 
 if (document.querySelectorAll(".js-hero-slider").length) {
@@ -507,8 +488,7 @@ const navigationScrollbar = new Swiper(".js-navigation-scrollbar", {
   scrollbar: {
     el: ".js-navigation-scrollbar .swiper-scrollbar",
     draggable: true
-  } // mousewheel: true,
-
+  }
 });
 
 function reviewsBlockSliderInit() {
@@ -576,7 +556,6 @@ function stepInfoSliderInit() {
     effect: "slide",
     speed: 800,
     spaceBetween: 20,
-    // rewind: true,
     autoHeight: true,
     pagination: {
       el: ".swiper-pagination",
@@ -600,16 +579,6 @@ function stepInfoSliderInit() {
     document.querySelector(".step-info__fraction-current").innerHTML = numberZero + index;
     document.querySelector(".step-info__fraction-total").innerHTML = numberZero + item.length;
   });
-  /* console.log(index)
-    stepInfoSlider.on('slidePrevTransitionStart', function () {
-      index = index -1;
-      
-      document.querySelector(".step-info__fraction-current")
-        .innerHTML = numberZero + index;
-      document.querySelector(".step-info__fraction-total")
-        .innerHTML = numberZero + item.length;
-    
-    }); */
 }
 
 if (document.querySelectorAll(".js-step-info-slider").length) {

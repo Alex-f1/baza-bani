@@ -6,5 +6,4 @@ const navigationScrollbar = new Swiper(".js-navigation-scrollbar", {
     el: ".js-navigation-scrollbar .swiper-scrollbar",
     draggable: true,
   },
-  // mousewheel: true,
 });
